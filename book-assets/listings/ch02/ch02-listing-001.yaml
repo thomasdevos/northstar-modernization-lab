@@ -1,0 +1,11 @@
+id: E-NS-0042
+claim: GBP month-end fees are truncated before export
+kind: inference
+source: src/fees/LegacyFee.java:184-191
+revision: task-pinned-git-revision
+confidence: medium
+contradictions: [E-NS-0047]
+owner: legacy-specialist
+reviewer: product-owner
+status: verification-required
+next_action: replay synthetic month-end fixtures

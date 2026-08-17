@@ -1,0 +1,31 @@
+task_id: RULES-FEE-CALENDAR-01
+mode: read_only
+repository_revision: illustrative-7c91a2f
+inputs:
+  - src/fee/
+  - test/fee/
+  - config/calendars/
+  - contracts/reconciliation-feed.yaml
+  - runbooks/fee-adjustment.md
+excluded:
+  - production records
+  - customer identifiers
+instruction: prompts/rule-extraction-v3.txt
+requested_outputs:
+  - catalogue.json
+  - contradictions.json
+  - source-index.csv
+  - coverage.md
+  - review-queue.md
+agent_may:
+  - identify candidates
+  - cite evidence
+  - propose confidence and next actions
+agent_must_not:
+  - approve policy
+  - close a material contradiction
+  - mark a disposition as accepted
+human_gates:
+  evidence_classification: quality_lead
+  policy_disposition: product_owner
+  acceptance_cases: quality_engineer

@@ -1,0 +1,13 @@
+trace_id: TRACE-GBP-ACCEPTED-01
+business_date: "2026-07-22"
+calendar_version: illustrative-gb-v4
+job: fee-calculate
+partition: accepted-gbp-03
+input_high_watermark: 18420
+input_count: 620
+output_count: 1240
+output_control_total: "illustrative:REDACTED"
+last_committed_key: "illustrative:742901"
+external_effects: pending-reconciliation
+checkpoint_status: candidate
+evidence: batch/checkpoint-handler.cbl:illustrative

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(./src/provider/recon/**)",
+      "Read(./src/consumer/recon/**)",
+      "Read(./contracts/**)",
+      "Edit(./tests/contracts/**)",
+      "Edit(./evidence/contracts/IF-RECON-FILE-01/**)",
+      "Bash(./gradlew contractTest *)"
+    ],
+    "deny": [
+      "Read(./secrets/**)",
+      "Read(./prod/**)",
+      "Bash(curl *)",
+      "Bash(ssh *)"
+    ]
+  }
+}

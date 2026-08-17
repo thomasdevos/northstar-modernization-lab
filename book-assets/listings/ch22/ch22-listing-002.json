@@ -1,0 +1,13 @@
+{
+  "parallel_case_id": "PR-FEE-001:replace-with-retained-id",
+  "claim_type": "illustrative",
+  "source_received_at": "replace-with-observed-time",
+  "source_digest": "replace-with-authorised-digest",
+  "legacy_revision": "replace-with-reviewed-revision",
+  "candidate_revision": "replace-with-reviewed-revision",
+  "router_revision": "replace-with-reviewed-revision",
+  "policy_revision": "fee-diff-v1",
+  "attempt": 1,
+  "authority": "legacy",
+  "candidate_effect_mode": "record_only"
+}

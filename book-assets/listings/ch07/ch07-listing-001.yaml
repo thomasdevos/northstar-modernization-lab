@@ -1,0 +1,14 @@
+id: RULE-FEE-017
+statement: "Illustrative: truncate eligible GBP fee to whole pounds"
+class: derivation
+status: hypothesis
+trigger: "last UK business day of month"
+outcome: "scale 0 with downward rounding"
+sources:
+  executable: "src/FeeCalculator.java:118-126"
+  test: "test/FeeCalculatorMonthEndTest.java:44-71"
+counter_evidence:
+  - "runbooks/fee-adjustment.md says nearest pound"
+confidence: medium
+consequence_if_wrong: material financial difference
+next_action: replay boundary values and obtain product-owner decision

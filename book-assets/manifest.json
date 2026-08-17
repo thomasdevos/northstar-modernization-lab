@@ -1,0 +1,1411 @@
+{
+  "schema_version": 1,
+  "description": "Full JSON and YAML listings externalized from numbered practical chapters.",
+  "listing_count": 70,
+  "status_definitions": {
+    "executable": "Complete listing with no detected omission marker. Validate environment-specific values before use.",
+    "illustrative": "Inherited example contains an explicit example, placeholder, omission marker, or incomplete JSON."
+  },
+  "listings": [
+    {
+      "id": "ch02-listing-001",
+      "chapter": 2,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch02/ch02-listing-001.yaml",
+        "sha256": "a1fce82438c92ea06abb450aa9ce2159d6b00edc3c8753ba82270d4ab6666fba"
+      },
+      "content_lines": 11,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-05-build-the-modernization-squad-and-workspace.md",
+        "sha256": "660debdcd54e7d12b41ec4feb2a4b576124ec452bd8fbc593b30ee4ce8d76bb8",
+        "section": "Make the evidence ledger the working memory",
+        "source_block_ordinal": 1,
+        "content_line_start": 189,
+        "content_line_end": 199
+      }
+    },
+    {
+      "id": "ch05-listing-001",
+      "chapter": 5,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch05/ch05-listing-001.json",
+        "sha256": "4ea4fd9506233525abbf5f0041cbd0e877fb98841821e5469b7f233d60f17d10"
+      },
+      "content_lines": 27,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-06-map-repositories-components-and-dependencies.md",
+        "sha256": "f565dcc1bf448f1380e08018dd1d2119f27b3016cc2d840dc1c4120cbac618f9",
+        "section": "Give Claude Code a read-only evidence contract",
+        "source_block_ordinal": 1,
+        "content_line_start": 197,
+        "content_line_end": 223
+      }
+    },
+    {
+      "id": "ch05-listing-002",
+      "chapter": 5,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch05/ch05-listing-002.json",
+        "sha256": "573f54e8fdf2dd8fe0b038c8003ccd628642c9227b9f95888ac44524c543a331"
+      },
+      "content_lines": 31,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-07-recover-runtime-architecture.md",
+        "sha256": "87f1ca2c38745151c7fd04423286fdc6a9fbb403c27e6481b5ac022362e8fadd",
+        "section": "Use an exact evidence format",
+        "source_block_ordinal": 1,
+        "content_line_start": 84,
+        "content_line_end": 114
+      }
+    },
+    {
+      "id": "ch06-listing-001",
+      "chapter": 6,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch06/ch06-listing-001.json",
+        "sha256": "b58f5b1d4fad19d8afe0835dc0e69049cdfe77cac13f2df7e7058db945bf49ed"
+      },
+      "content_lines": 13,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-08-trace-data-messages-and-batch-flows.md",
+        "sha256": "19eaf7fe657803dd6af76e1f035aaddca467d274c27d75034e010b5cc1aa24f0",
+        "section": "Write a contract that can fail review",
+        "source_block_ordinal": 1,
+        "content_line_start": 87,
+        "content_line_end": 99
+      }
+    },
+    {
+      "id": "ch06-listing-002",
+      "chapter": 6,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch06/ch06-listing-002.yaml",
+        "sha256": "4ea60cb47ddb89cb9ea6cb0b103c126a1e3a66503ba4cb82f7e6b1fa859443c3"
+      },
+      "content_lines": 13,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-08-trace-data-messages-and-batch-flows.md",
+        "sha256": "19eaf7fe657803dd6af76e1f035aaddca467d274c27d75034e010b5cc1aa24f0",
+        "section": "Reconstruct the night that actually ran",
+        "source_block_ordinal": 2,
+        "content_line_start": 199,
+        "content_line_end": 211
+      }
+    },
+    {
+      "id": "ch07-listing-001",
+      "chapter": 7,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch07/ch07-listing-001.yaml",
+        "sha256": "91bda20a1aee6066e4ac28300095c6e24d27da0a3169fcb3078c1872ca7e0cc6"
+      },
+      "content_lines": 14,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-09-extract-business-rules-with-confidence-levels.md",
+        "sha256": "e240a74ae55e94461c4dadf45c6de6105da90627d78ebcc8193c81ca2ac527d9",
+        "section": "Record one candidate without overstating it",
+        "source_block_ordinal": 1,
+        "content_line_start": 77,
+        "content_line_end": 90
+      }
+    },
+    {
+      "id": "ch07-listing-002",
+      "chapter": 7,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch07/ch07-listing-002.json",
+        "sha256": "a075673cb9189784acbf610afb29e0ff41bb5f5d2c07936a3019280432cb4cbe"
+      },
+      "content_lines": 63,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-09-extract-business-rules-with-confidence-levels.md",
+        "sha256": "e240a74ae55e94461c4dadf45c6de6105da90627d78ebcc8193c81ca2ac527d9",
+        "section": "Make omissions visible",
+        "source_block_ordinal": 2,
+        "content_line_start": 102,
+        "content_line_end": 164
+      }
+    },
+    {
+      "id": "ch07-listing-003",
+      "chapter": 7,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch07/ch07-listing-003.yaml",
+        "sha256": "4097b5275b894396ac028f74ca61350d20ec736dd8b1d47a63b3a5c88b21b029"
+      },
+      "content_lines": 33,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-09-extract-business-rules-with-confidence-levels.md",
+        "sha256": "e240a74ae55e94461c4dadf45c6de6105da90627d78ebcc8193c81ca2ac527d9",
+        "section": "Work through the Northstar catalogue",
+        "source_block_ordinal": 3,
+        "content_line_start": 189,
+        "content_line_end": 221
+      }
+    },
+    {
+      "id": "ch07-listing-004",
+      "chapter": 7,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch07/ch07-listing-004.yaml",
+        "sha256": "92a537d70a2854727a1dd72d60d110bf7c4640d3ebd1fd55c4cc876e261b5578"
+      },
+      "content_lines": 31,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-09-extract-business-rules-with-confidence-levels.md",
+        "sha256": "e240a74ae55e94461c4dadf45c6de6105da90627d78ebcc8193c81ca2ac527d9",
+        "section": "Keep the Claude Code run as provenance",
+        "source_block_ordinal": 4,
+        "content_line_start": 231,
+        "content_line_end": 261
+      }
+    },
+    {
+      "id": "ch07-listing-005",
+      "chapter": 7,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch07/ch07-listing-005.yaml",
+        "sha256": "94fcc508be0c0157227cfd93d3099676b833026552d333c7c2f2eb713dca3ca6"
+      },
+      "content_lines": 23,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-10-recover-ownership-and-operational-knowledge.md",
+        "sha256": "b130aec43d45e0813c060239a31d48c3320daa4e00c801da2f27a0e3f8a854b0",
+        "section": "A reusable decision-right record",
+        "source_block_ordinal": 1,
+        "content_line_start": 63,
+        "content_line_end": 85
+      }
+    },
+    {
+      "id": "ch08-listing-001",
+      "chapter": 8,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch08/ch08-listing-001.yaml",
+        "sha256": "c53bbbe0aa81bc7468bb284e05e46c7b5b5565a50a7f888085d210bf46b57e7c"
+      },
+      "content_lines": 28,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-11-build-characterization-tests.md",
+        "sha256": "309418e6d6d8b0d0a92e8b2de88ade8b4dc430a3bfcef84c4cb0b248de66d957",
+        "section": "Make the fixture deterministic enough to argue about",
+        "source_block_ordinal": 1,
+        "content_line_start": 137,
+        "content_line_end": 164
+      }
+    },
+    {
+      "id": "ch08-listing-002",
+      "chapter": 8,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch08/ch08-listing-002.yaml",
+        "sha256": "db3eb649c60752780d29a1cd0653adccb241ac813a755de612cc6b4a62485320"
+      },
+      "content_lines": 11,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-11-build-characterization-tests.md",
+        "sha256": "309418e6d6d8b0d0a92e8b2de88ade8b4dc430a3bfcef84c4cb0b248de66d957",
+        "section": "Let expected failures keep talking",
+        "source_block_ordinal": 2,
+        "content_line_start": 280,
+        "content_line_end": 290
+      }
+    },
+    {
+      "id": "ch08-listing-003",
+      "chapter": 8,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch08/ch08-listing-003.json",
+        "sha256": "83aed013a4a403ab77f67eb7943a89cb65c1618a11bedfe45146f686d536239c"
+      },
+      "content_lines": 54,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-11-build-characterization-tests.md",
+        "sha256": "309418e6d6d8b0d0a92e8b2de88ade8b4dc430a3bfcef84c4cb0b248de66d957",
+        "section": "Expected return schema",
+        "source_block_ordinal": 3,
+        "content_line_start": 388,
+        "content_line_end": 441
+      }
+    },
+    {
+      "id": "ch09-listing-001",
+      "chapter": 9,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch09/ch09-listing-001.json",
+        "sha256": "b6d4773ab3c47b5671adb7376613c09a42fe0f2937f5a80c09207ecfbd7cca1f"
+      },
+      "content_lines": 27,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-12-create-golden-masters-without-freezing-noise.md",
+        "sha256": "6a037e0fc4d3f5ab6f343f5f2a67fd4a2902eb89ba0d4d02a2779ae4a5452b92",
+        "section": "Version every input and control",
+        "source_block_ordinal": 1,
+        "content_line_start": 101,
+        "content_line_end": 127
+      }
+    },
+    {
+      "id": "ch09-listing-002",
+      "chapter": 9,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch09/ch09-listing-002.yaml",
+        "sha256": "dd6a46cadb53c4c6cefa28dbfcfeea11f2150e5680a7d0990d400c00fb6f994e"
+      },
+      "content_lines": 20,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-12-create-golden-masters-without-freezing-noise.md",
+        "sha256": "6a037e0fc4d3f5ab6f343f5f2a67fd4a2902eb89ba0d4d02a2779ae4a5452b92",
+        "section": "Approval is a sequence, not a button",
+        "source_block_ordinal": 2,
+        "content_line_start": 238,
+        "content_line_end": 257
+      }
+    },
+    {
+      "id": "ch09-listing-003",
+      "chapter": 9,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch09/ch09-listing-003.json",
+        "sha256": "421996fc4284dc876070c50d5c898504889285fa0f4e295961013dcdfb1ad675"
+      },
+      "content_lines": 18,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-12-create-golden-masters-without-freezing-noise.md",
+        "sha256": "6a037e0fc4d3f5ab6f343f5f2a67fd4a2902eb89ba0d4d02a2779ae4a5452b92",
+        "section": "A bounded Claude Code workflow",
+        "source_block_ordinal": 3,
+        "content_line_start": 271,
+        "content_line_end": 288
+      }
+    },
+    {
+      "id": "ch09-listing-004",
+      "chapter": 9,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch09/ch09-listing-004.json",
+        "sha256": "bbbeb4b231caabc6842a93769236400e6d8d836c616c87393f623dd34b7b4e71"
+      },
+      "content_lines": 25,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-12-create-golden-masters-without-freezing-noise.md",
+        "sha256": "6a037e0fc4d3f5ab6f343f5f2a67fd4a2902eb89ba0d4d02a2779ae4a5452b92",
+        "section": "Expected return schema",
+        "source_block_ordinal": 4,
+        "content_line_start": 345,
+        "content_line_end": 369
+      }
+    },
+    {
+      "id": "ch10-listing-001",
+      "chapter": 10,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch10/ch10-listing-001.yaml",
+        "sha256": "456e9b60e09f6aab985e060fb1dfca997187159c8a57e23fa62b96816237da00"
+      },
+      "content_lines": 22,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-13-protect-interfaces-with-contract-tests.md",
+        "sha256": "ef8b3d6abcdcbace33882e9596ca1c5b72e1b49003e5dba77cd3df038fd65f6b",
+        "section": "Inventory consumers before choosing a tool",
+        "source_block_ordinal": 1,
+        "content_line_start": 80,
+        "content_line_end": 101
+      }
+    },
+    {
+      "id": "ch10-listing-002",
+      "chapter": 10,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch10/ch10-listing-002.json",
+        "sha256": "12e2afb225c4eb9d40ec8222f60a019cdbb281f5dc7844beddc3060811a49d5c"
+      },
+      "content_lines": 18,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-13-protect-interfaces-with-contract-tests.md",
+        "sha256": "ef8b3d6abcdcbace33882e9596ca1c5b72e1b49003e5dba77cd3df038fd65f6b",
+        "section": "A bounded Claude Code workflow",
+        "source_block_ordinal": 2,
+        "content_line_start": 205,
+        "content_line_end": 222
+      }
+    },
+    {
+      "id": "ch10-listing-003",
+      "chapter": 10,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch10/ch10-listing-003.json",
+        "sha256": "222ce48be58f16cf96255bf678387da37ff17106b4abc1c43a49c8d049b10ccc"
+      },
+      "content_lines": 24,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-13-protect-interfaces-with-contract-tests.md",
+        "sha256": "ef8b3d6abcdcbace33882e9596ca1c5b72e1b49003e5dba77cd3df038fd65f6b",
+        "section": "Expected return schema",
+        "source_block_ordinal": 3,
+        "content_line_start": 281,
+        "content_line_end": 304
+      }
+    },
+    {
+      "id": "ch11-listing-001",
+      "chapter": 11,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch11/ch11-listing-001.json",
+        "sha256": "9125724c6a1ba10400fb45a8b92ff75386a9b7f8a2fd2f419f7fdd1f8e859bee"
+      },
+      "content_lines": 19,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-14-test-invariants-with-properties-and-metamorphic-relations.md",
+        "sha256": "bc5a39821108f1868b7d2553d3c93c3e3144a3083892f37e016b64f9f249ae9f",
+        "section": "A bounded Claude Code workflow",
+        "source_block_ordinal": 1,
+        "content_line_start": 244,
+        "content_line_end": 262
+      }
+    },
+    {
+      "id": "ch11-listing-002",
+      "chapter": 11,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch11/ch11-listing-002.json",
+        "sha256": "b9641402ec6779f13c71905509dd810f49736c77a5d0f6fe8c59f266d1c53764"
+      },
+      "content_lines": 28,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-14-test-invariants-with-properties-and-metamorphic-relations.md",
+        "sha256": "bc5a39821108f1868b7d2553d3c93c3e3144a3083892f37e016b64f9f249ae9f",
+        "section": "Expected return schema",
+        "source_block_ordinal": 2,
+        "content_line_start": 330,
+        "content_line_end": 357
+      }
+    },
+    {
+      "id": "ch12-listing-001",
+      "chapter": 12,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch12/ch12-listing-001.yaml",
+        "sha256": "96ffbc4f0cadfa675985176e86168d3cbae75f730e9e3631f9b40ccefc147933"
+      },
+      "content_lines": 24,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-15-turn-production-observations-into-safe-replay-data.md",
+        "sha256": "901814047aa06138585a68381599186c408e23a6b031c73a43bad786c499b6a1",
+        "section": "Telemetry is evidence, not automatically replay data",
+        "source_block_ordinal": 1,
+        "content_line_start": 54,
+        "content_line_end": 77
+      }
+    },
+    {
+      "id": "ch12-listing-002",
+      "chapter": 12,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch12/ch12-listing-002.json",
+        "sha256": "e55679cfcc77101089e1fbe96c88aa08ab05b60da52872f460c4ff0536c2df2c"
+      },
+      "content_lines": 17,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-15-turn-production-observations-into-safe-replay-data.md",
+        "sha256": "901814047aa06138585a68381599186c408e23a6b031c73a43bad786c499b6a1",
+        "section": "Sample for coverage, not convenience",
+        "source_block_ordinal": 2,
+        "content_line_start": 122,
+        "content_line_end": 138
+      }
+    },
+    {
+      "id": "ch12-listing-003",
+      "chapter": 12,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch12/ch12-listing-003.yaml",
+        "sha256": "9e4174b29d5b46adae18e0e499290f480b9b4e23ee701e119b64706596c9ef5f"
+      },
+      "content_lines": 18,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-15-turn-production-observations-into-safe-replay-data.md",
+        "sha256": "901814047aa06138585a68381599186c408e23a6b031c73a43bad786c499b6a1",
+        "section": "Make replay deterministic enough to compare",
+        "source_block_ordinal": 3,
+        "content_line_start": 197,
+        "content_line_end": 214
+      }
+    },
+    {
+      "id": "ch12-listing-004",
+      "chapter": 12,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch12/ch12-listing-004.yaml",
+        "sha256": "67ab354450b45c418ea23fec89f420ecf6b0d517585fb0ad0778017a1d594011"
+      },
+      "content_lines": 15,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-15-turn-production-observations-into-safe-replay-data.md",
+        "sha256": "901814047aa06138585a68381599186c408e23a6b031c73a43bad786c499b6a1",
+        "section": "Isolate every side effect",
+        "source_block_ordinal": 4,
+        "content_line_start": 230,
+        "content_line_end": 244
+      }
+    },
+    {
+      "id": "ch12-listing-005",
+      "chapter": 12,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch12/ch12-listing-005.json",
+        "sha256": "5df567ba027b8863cfd89580ad03e42ccf0881739ebe8998fe542c56937caa6d"
+      },
+      "content_lines": 22,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-15-turn-production-observations-into-safe-replay-data.md",
+        "sha256": "901814047aa06138585a68381599186c408e23a6b031c73a43bad786c499b6a1",
+        "section": "A bounded Claude Code workflow",
+        "source_block_ordinal": 5,
+        "content_line_start": 258,
+        "content_line_end": 279
+      }
+    },
+    {
+      "id": "ch12-listing-006",
+      "chapter": 12,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch12/ch12-listing-006.json",
+        "sha256": "6c7b3e180a7719db4115629bf1c97218b0de0f25153a11979f67f1fb663c7784"
+      },
+      "content_lines": 28,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-15-turn-production-observations-into-safe-replay-data.md",
+        "sha256": "901814047aa06138585a68381599186c408e23a6b031c73a43bad786c499b6a1",
+        "section": "Expected return schema",
+        "source_block_ordinal": 6,
+        "content_line_start": 339,
+        "content_line_end": 366
+      }
+    },
+    {
+      "id": "ch13-listing-001",
+      "chapter": 13,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch13/ch13-listing-001.yaml",
+        "sha256": "a8446f967978752d6ed9639524141ce68f97b910acb2d4954404a2c29d8e9b17"
+      },
+      "content_lines": 52,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-16-define-acceptance-and-rollback-before-transformation.md",
+        "sha256": "9b7ecb00d53ae3e3a7f51af7b14c747e2f98c1a43773fbc92f3b9cd1a0f37ba3",
+        "section": "The Northstar acceptance contract",
+        "source_block_ordinal": 1,
+        "content_line_start": 203,
+        "content_line_end": 254
+      }
+    },
+    {
+      "id": "ch13-listing-002",
+      "chapter": 13,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch13/ch13-listing-002.json",
+        "sha256": "4073ebcd66bdbe40d5c2261ada31125a99171ca0c6a3fa91794766d66aa683f7"
+      },
+      "content_lines": 21,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-16-define-acceptance-and-rollback-before-transformation.md",
+        "sha256": "9b7ecb00d53ae3e3a7f51af7b14c747e2f98c1a43773fbc92f3b9cd1a0f37ba3",
+        "section": "A bounded Claude Code workflow",
+        "source_block_ordinal": 2,
+        "content_line_start": 266,
+        "content_line_end": 286
+      }
+    },
+    {
+      "id": "ch13-listing-003",
+      "chapter": 13,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch13/ch13-listing-003.json",
+        "sha256": "bc145c0803e71c93622ad397d6a6e97e2ab8a5eeeef8e4086b8360dab6812e64"
+      },
+      "content_lines": 26,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-16-define-acceptance-and-rollback-before-transformation.md",
+        "sha256": "9b7ecb00d53ae3e3a7f51af7b14c747e2f98c1a43773fbc92f3b9cd1a0f37ba3",
+        "section": "Expected return schema",
+        "source_block_ordinal": 3,
+        "content_line_start": 344,
+        "content_line_end": 369
+      }
+    },
+    {
+      "id": "ch14-listing-001",
+      "chapter": 14,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch14/ch14-listing-001.json",
+        "sha256": "2b5d77d53a793784e57bca4093c4627456f60f9570c67837484decc7c9f6d6c7"
+      },
+      "content_lines": 24,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-17-find-and-create-legacy-seams.md",
+        "sha256": "833fb2b95ba12cdea2e5e4efbd5fa7b2fd5c59946e8b9a7cf461300b4be6c74a",
+        "section": "A bounded Claude Code workflow",
+        "source_block_ordinal": 1,
+        "content_line_start": 228,
+        "content_line_end": 251
+      }
+    },
+    {
+      "id": "ch14-listing-002",
+      "chapter": 14,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch14/ch14-listing-002.json",
+        "sha256": "b7078da30748e0a2b8892dc89703b2c2cc8d6fe79551f2c988ceb0eb17a7baf3"
+      },
+      "content_lines": 28,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-17-find-and-create-legacy-seams.md",
+        "sha256": "833fb2b95ba12cdea2e5e4efbd5fa7b2fd5c59946e8b9a7cf461300b4be6c74a",
+        "section": "Expected return schema",
+        "source_block_ordinal": 2,
+        "content_line_start": 309,
+        "content_line_end": 336
+      }
+    },
+    {
+      "id": "ch15-listing-001",
+      "chapter": 15,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch15/ch15-listing-001.yaml",
+        "sha256": "7c59c815de82621fda5ce87b2f6d22162c246914fe9186c5dd7298fb018f03e1"
+      },
+      "content_lines": 14,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-18-design-a-strangler-path.md",
+        "sha256": "3a6ccac8781e548f52e548791a13bb3d59d5aef251def0aa327acba0ff5d8e50",
+        "section": "Use an anti-corruption layer for translation, not indecision",
+        "source_block_ordinal": 1,
+        "content_line_start": 133,
+        "content_line_end": 146
+      }
+    },
+    {
+      "id": "ch15-listing-002",
+      "chapter": 15,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch15/ch15-listing-002.json",
+        "sha256": "5bdb2f1167a1c9c52fef9ddec0768e6bb1e6f8b35a3cf00543c8b279dc45b416"
+      },
+      "content_lines": 24,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-18-design-a-strangler-path.md",
+        "sha256": "3a6ccac8781e548f52e548791a13bb3d59d5aef251def0aa327acba0ff5d8e50",
+        "section": "A bounded Claude Code workflow",
+        "source_block_ordinal": 2,
+        "content_line_start": 221,
+        "content_line_end": 244
+      }
+    },
+    {
+      "id": "ch15-listing-003",
+      "chapter": 15,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch15/ch15-listing-003.json",
+        "sha256": "05af4645b935a120a995fe2223e98dcb9ed08d95052081ad347f28b70b892c5a"
+      },
+      "content_lines": 30,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-18-design-a-strangler-path.md",
+        "sha256": "3a6ccac8781e548f52e548791a13bb3d59d5aef251def0aa327acba0ff5d8e50",
+        "section": "Expected return schema",
+        "source_block_ordinal": 3,
+        "content_line_start": 301,
+        "content_line_end": 330
+      }
+    },
+    {
+      "id": "ch16-listing-001",
+      "chapter": 16,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch16/ch16-listing-001.json",
+        "sha256": "297257ee551293fdb5949355f60727ac268f5e9ab15cf138b5c176d077645e6b"
+      },
+      "content_lines": 24,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-19-change-apis-and-schemas-with-expand-migrate-contract.md",
+        "sha256": "26fe59e2b2a827a8a92c38626c3cbc045912ef4acde900f90718766a1b2f0565",
+        "section": "A bounded Claude Code workflow",
+        "source_block_ordinal": 2,
+        "content_line_start": 215,
+        "content_line_end": 238
+      }
+    },
+    {
+      "id": "ch16-listing-002",
+      "chapter": 16,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch16/ch16-listing-002.json",
+        "sha256": "7cda7aeed58a2fc4b34afab385ed027c910c8ece552ecdd22d3d465b37263b0f"
+      },
+      "content_lines": 24,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-19-change-apis-and-schemas-with-expand-migrate-contract.md",
+        "sha256": "26fe59e2b2a827a8a92c38626c3cbc045912ef4acde900f90718766a1b2f0565",
+        "section": "Expected return schema",
+        "source_block_ordinal": 3,
+        "content_line_start": 290,
+        "content_line_end": 313
+      }
+    },
+    {
+      "id": "ch17-listing-001",
+      "chapter": 17,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch17/ch17-listing-001.json",
+        "sha256": "8394fc4ebb2bac8782041109a48085985cd3ba3f455dc0efba8f8d9f1958ec6f"
+      },
+      "content_lines": 26,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-20-modernize-frameworks-and-languages-without-losing-semantics.md",
+        "sha256": "5fa509935601f67da25a3b35f6e48f4b8f8589114e9b8edb72e1c4e965a993c5",
+        "section": "A bounded Claude Code workflow",
+        "source_block_ordinal": 1,
+        "content_line_start": 271,
+        "content_line_end": 296
+      }
+    },
+    {
+      "id": "ch17-listing-002",
+      "chapter": 17,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch17/ch17-listing-002.json",
+        "sha256": "52969aeace97799925f51833ed5979914ce098a2059a33079bee7a18d5699512"
+      },
+      "content_lines": 31,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-20-modernize-frameworks-and-languages-without-losing-semantics.md",
+        "sha256": "5fa509935601f67da25a3b35f6e48f4b8f8589114e9b8edb72e1c4e965a993c5",
+        "section": "Expected return schema",
+        "source_block_ordinal": 2,
+        "content_line_start": 353,
+        "content_line_end": 383
+      }
+    },
+    {
+      "id": "ch18-listing-001",
+      "chapter": 18,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch18/ch18-listing-001.yaml",
+        "sha256": "6dbd4ce0f80784089e8275f2c0957dfc0a83145586aa0e6b509cec13a7042ee5"
+      },
+      "content_lines": 20,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-21-migrate-data-without-splitting-truth.md",
+        "sha256": "696a8a86a85db846d099b0cf74a846a7c91b19f201d0b60fd99bd6c1724392ae",
+        "section": "Backfill a moving source without pretending it stopped",
+        "source_block_ordinal": 1,
+        "content_line_start": 126,
+        "content_line_end": 145
+      }
+    },
+    {
+      "id": "ch18-listing-002",
+      "chapter": 18,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch18/ch18-listing-002.json",
+        "sha256": "fa1f937cb553d2ae700ee7b9898897583c0cae81cb51613c7629b9a4cc21b48c"
+      },
+      "content_lines": 11,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-21-migrate-data-without-splitting-truth.md",
+        "sha256": "696a8a86a85db846d099b0cf74a846a7c91b19f201d0b60fd99bd6c1724392ae",
+        "section": "Define idempotency at the business effect",
+        "source_block_ordinal": 2,
+        "content_line_start": 181,
+        "content_line_end": 191
+      }
+    },
+    {
+      "id": "ch18-listing-003",
+      "chapter": 18,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch18/ch18-listing-003.json",
+        "sha256": "6013308e29b73e9dd96bef65b6a48bee09b5e77dce8f3c58537dfe15302c1ece"
+      },
+      "content_lines": 25,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-21-migrate-data-without-splitting-truth.md",
+        "sha256": "696a8a86a85db846d099b0cf74a846a7c91b19f201d0b60fd99bd6c1724392ae",
+        "section": "A bounded Claude Code workflow",
+        "source_block_ordinal": 3,
+        "content_line_start": 259,
+        "content_line_end": 283
+      }
+    },
+    {
+      "id": "ch18-listing-004",
+      "chapter": 18,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch18/ch18-listing-004.json",
+        "sha256": "7ebdf81e26693fedc392ed0270c5784234e7fd0139c7044cd024973bcb4e5998"
+      },
+      "content_lines": 25,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-21-migrate-data-without-splitting-truth.md",
+        "sha256": "696a8a86a85db846d099b0cf74a846a7c91b19f201d0b60fd99bd6c1724392ae",
+        "section": "Expected return schema",
+        "source_block_ordinal": 4,
+        "content_line_start": 335,
+        "content_line_end": 359
+      }
+    },
+    {
+      "id": "ch19-listing-001",
+      "chapter": 19,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch19/ch19-listing-001.json",
+        "sha256": "79197f91003bb5909beaf2588e0968c7840e77458e01f97c46ba8f1cc8c1f3da"
+      },
+      "content_lines": 28,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-22-operate-human-and-agent-teams-for-bounded-modernization-work.md",
+        "sha256": "d3008071508c3f1adcd043032d331fee8e48628b02e51f3b5263829fa6d9b53e",
+        "section": "Control tools and write sets",
+        "source_block_ordinal": 1,
+        "content_line_start": 171,
+        "content_line_end": 198
+      }
+    },
+    {
+      "id": "ch19-listing-002",
+      "chapter": 19,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch19/ch19-listing-002.json",
+        "sha256": "2aef7afc805b5428aa72f94d3273f2560107e5e6821c0088abdda9486d866e40"
+      },
+      "content_lines": 26,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-22-operate-human-and-agent-teams-for-bounded-modernization-work.md",
+        "sha256": "d3008071508c3f1adcd043032d331fee8e48628b02e51f3b5263829fa6d9b53e",
+        "section": "Expected return schema",
+        "source_block_ordinal": 2,
+        "content_line_start": 250,
+        "content_line_end": 275
+      }
+    },
+    {
+      "id": "ch20-listing-001",
+      "chapter": 20,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch20/ch20-listing-001.yaml",
+        "sha256": "004ba68a7aab5e16ada02752724a0a7be5df97d6f09d1d324dfbe05deeff5c79"
+      },
+      "content_lines": 22,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-23-build-a-differential-test-harness.md",
+        "sha256": "36e5124f1be81cb8f095f50bc1d65ab67ef4e335d5de048eb5e91739a08f7bfc",
+        "section": "Make identical input a retained fact",
+        "source_block_ordinal": 1,
+        "content_line_start": 85,
+        "content_line_end": 106
+      }
+    },
+    {
+      "id": "ch20-listing-002",
+      "chapter": 20,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch20/ch20-listing-002.json",
+        "sha256": "13ff4eebc317e4943c652dca50374dc15312f0c45ee5ba44f9fd8fa39e89704f"
+      },
+      "content_lines": 15,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-23-build-a-differential-test-harness.md",
+        "sha256": "36e5124f1be81cb8f095f50bc1d65ab67ef4e335d5de048eb5e91739a08f7bfc",
+        "section": "Normalize with one policy, then compare by meaning",
+        "source_block_ordinal": 2,
+        "content_line_start": 134,
+        "content_line_end": 148
+      }
+    },
+    {
+      "id": "ch20-listing-003",
+      "chapter": 20,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch20/ch20-listing-003.json",
+        "sha256": "32a3200182f0bb4c91d53e4fdcd1836a445b80572bcb71a7c9ad2d8925b559ec"
+      },
+      "content_lines": 13,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-23-build-a-differential-test-harness.md",
+        "sha256": "36e5124f1be81cb8f095f50bc1d65ab67ef4e335d5de048eb5e91739a08f7bfc",
+        "section": "Normalize with one policy, then compare by meaning",
+        "source_block_ordinal": 3,
+        "content_line_start": 158,
+        "content_line_end": 170
+      }
+    },
+    {
+      "id": "ch20-listing-004",
+      "chapter": 20,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch20/ch20-listing-004.json",
+        "sha256": "8cf2bb02fa570f5446ba4b9c81f82fc450c5bf80f2fed3e97d2d7261ea7027ef"
+      },
+      "content_lines": 26,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-23-build-a-differential-test-harness.md",
+        "sha256": "36e5124f1be81cb8f095f50bc1d65ab67ef4e335d5de048eb5e91739a08f7bfc",
+        "section": "A bounded Claude Code workflow",
+        "source_block_ordinal": 4,
+        "content_line_start": 312,
+        "content_line_end": 337
+      }
+    },
+    {
+      "id": "ch20-listing-005",
+      "chapter": 20,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch20/ch20-listing-005.json",
+        "sha256": "dc9247f6e5f8772b345c0a1bc5b17b0d73d043e495ecf0b2ab24bacd14550298"
+      },
+      "content_lines": 20,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-23-build-a-differential-test-harness.md",
+        "sha256": "36e5124f1be81cb8f095f50bc1d65ab67ef4e335d5de048eb5e91739a08f7bfc",
+        "section": "Expected return schema",
+        "source_block_ordinal": 5,
+        "content_line_start": 381,
+        "content_line_end": 400
+      }
+    },
+    {
+      "id": "ch21-listing-001",
+      "chapter": 21,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch21/ch21-listing-001.yaml",
+        "sha256": "576e9a53300dcfe693acebfd1e438ed08a994f3d729777d0b625901527583039"
+      },
+      "content_lines": 20,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-24-test-the-tests-with-mutation-testing.md",
+        "sha256": "9bb28cb4dd1952ab94813a3d014e1ba2f35418e472175707acd267dcd0b22f72",
+        "section": "Investigate survivors instead of chasing a score",
+        "source_block_ordinal": 1,
+        "content_line_start": 185,
+        "content_line_end": 204
+      }
+    },
+    {
+      "id": "ch21-listing-002",
+      "chapter": 21,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch21/ch21-listing-002.json",
+        "sha256": "dd0c1b4b695b7c24e4ba8675fa3bed5d92f02ef0d5a6c25000c964989bf7b9bd"
+      },
+      "content_lines": 24,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-24-test-the-tests-with-mutation-testing.md",
+        "sha256": "9bb28cb4dd1952ab94813a3d014e1ba2f35418e472175707acd267dcd0b22f72",
+        "section": "Bound Claude Code to analysis and candidate tests",
+        "source_block_ordinal": 2,
+        "content_line_start": 232,
+        "content_line_end": 255
+      }
+    },
+    {
+      "id": "ch21-listing-003",
+      "chapter": 21,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch21/ch21-listing-003.json",
+        "sha256": "3f445a2c88d3351a394cd46cbc687ffc6264e9fcc2102fe3d40071f691890f21"
+      },
+      "content_lines": 15,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-24-test-the-tests-with-mutation-testing.md",
+        "sha256": "9bb28cb4dd1952ab94813a3d014e1ba2f35418e472175707acd267dcd0b22f72",
+        "section": "Bound Claude Code to analysis and candidate tests",
+        "source_block_ordinal": 3,
+        "content_line_start": 301,
+        "content_line_end": 315
+      }
+    },
+    {
+      "id": "ch22-listing-001",
+      "chapter": 22,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch22/ch22-listing-001.yaml",
+        "sha256": "0705ebd42e52023f5d1eb268cda4eb38ec0f398e6e6a74fd60132833cc4a886c"
+      },
+      "content_lines": 33,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-25-run-old-and-new-systems-in-parallel.md",
+        "sha256": "65ed730aec78d344ce2602a0fb103a1eadf40c4bd2df2274c003b79536b98bce",
+        "section": "Write the charter before copying traffic",
+        "source_block_ordinal": 1,
+        "content_line_start": 67,
+        "content_line_end": 99
+      }
+    },
+    {
+      "id": "ch22-listing-002",
+      "chapter": 22,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch22/ch22-listing-002.json",
+        "sha256": "0d57616cd6c29e4dabbdac5177903bc079a3c8b075721f18370ad505dcd63499"
+      },
+      "content_lines": 13,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-25-run-old-and-new-systems-in-parallel.md",
+        "sha256": "65ed730aec78d344ce2602a0fb103a1eadf40c4bd2df2274c003b79536b98bce",
+        "section": "Preserve one identity across both paths",
+        "source_block_ordinal": 2,
+        "content_line_start": 113,
+        "content_line_end": 125
+      }
+    },
+    {
+      "id": "ch22-listing-003",
+      "chapter": 22,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch22/ch22-listing-003.json",
+        "sha256": "eb2833165b081b6a9f3eb4cc07058f111df380f61e03e6e338aa7a1b614a1ab6"
+      },
+      "content_lines": 27,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-25-run-old-and-new-systems-in-parallel.md",
+        "sha256": "65ed730aec78d344ce2602a0fb103a1eadf40c4bd2df2274c003b79536b98bce",
+        "section": "A bounded Claude Code workflow",
+        "source_block_ordinal": 3,
+        "content_line_start": 228,
+        "content_line_end": 254
+      }
+    },
+    {
+      "id": "ch22-listing-004",
+      "chapter": 22,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch22/ch22-listing-004.json",
+        "sha256": "d846434e9d9dabb58d247ae98633571aba62a5e47d27f290df1f0026f78a5808"
+      },
+      "content_lines": 22,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-25-run-old-and-new-systems-in-parallel.md",
+        "sha256": "65ed730aec78d344ce2602a0fb103a1eadf40c4bd2df2274c003b79536b98bce",
+        "section": "Expected return schema",
+        "source_block_ordinal": 4,
+        "content_line_start": 304,
+        "content_line_end": 325
+      }
+    },
+    {
+      "id": "ch23-listing-001",
+      "chapter": 23,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch23/ch23-listing-001.json",
+        "sha256": "5137eb498e953111f3628c0f13310e494c02d2e4a52c86227c4d1a208efc5df8"
+      },
+      "content_lines": 12,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-26-reconcile-outputs-state-and-side-effects.md",
+        "sha256": "28a13dbbbd3a2ba3b252675f3c08bce346729e9909ffff65592387a66cd930f1",
+        "section": "Preserve identity before comparing values",
+        "source_block_ordinal": 1,
+        "content_line_start": 84,
+        "content_line_end": 95
+      }
+    },
+    {
+      "id": "ch23-listing-002",
+      "chapter": 23,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch23/ch23-listing-002.yaml",
+        "sha256": "518a59c0a571ee59afa22408d482614be0200d9923f2c666b0310cc4bff1d347"
+      },
+      "content_lines": 11,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-26-reconcile-outputs-state-and-side-effects.md",
+        "sha256": "28a13dbbbd3a2ba3b252675f3c08bce346729e9909ffff65592387a66cd930f1",
+        "section": "Approve tolerances before seeing the answer",
+        "source_block_ordinal": 4,
+        "content_line_start": 204,
+        "content_line_end": 214
+      }
+    },
+    {
+      "id": "ch23-listing-003",
+      "chapter": 23,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch23/ch23-listing-003.json",
+        "sha256": "71c31108831d165902be956c0e20e6a16ce1481b5ae463aa6f2a493553ebd20d"
+      },
+      "content_lines": 23,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-26-reconcile-outputs-state-and-side-effects.md",
+        "sha256": "28a13dbbbd3a2ba3b252675f3c08bce346729e9909ffff65592387a66cd930f1",
+        "section": "Bound Claude Code to evidence preparation",
+        "source_block_ordinal": 5,
+        "content_line_start": 274,
+        "content_line_end": 296
+      }
+    },
+    {
+      "id": "ch24-listing-001",
+      "chapter": 24,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch24/ch24-listing-001.json",
+        "sha256": "009f3d05e2752c878a2da607c65e41d33a8ea160994c2f689fb59720be3371ab"
+      },
+      "content_lines": 29,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-27-produce-security-compliance-and-audit-evidence.md",
+        "sha256": "f529b4ba99130a247ec21dba6f5ca62e2c6ae0fc433407130d3286f484c7de57",
+        "section": "Define the evidence-pack manifest",
+        "source_block_ordinal": 1,
+        "content_line_start": 107,
+        "content_line_end": 135
+      }
+    },
+    {
+      "id": "ch24-listing-002",
+      "chapter": 24,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch24/ch24-listing-002.json",
+        "sha256": "c845eed49a26a615f841e0c890daac331d96dad9d23b4eeca195f68454b43049"
+      },
+      "content_lines": 25,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-27-produce-security-compliance-and-audit-evidence.md",
+        "sha256": "f529b4ba99130a247ec21dba6f5ca62e2c6ae0fc433407130d3286f484c7de57",
+        "section": "Workspace and permissions",
+        "source_block_ordinal": 2,
+        "content_line_start": 261,
+        "content_line_end": 285
+      }
+    },
+    {
+      "id": "ch24-listing-003",
+      "chapter": 24,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch24/ch24-listing-003.json",
+        "sha256": "da99a4892e0cebc35dca7586c9653df9662476ad6460a4a172bb3272237e206f"
+      },
+      "content_lines": 41,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-27-produce-security-compliance-and-audit-evidence.md",
+        "sha256": "f529b4ba99130a247ec21dba6f5ca62e2c6ae0fc433407130d3286f484c7de57",
+        "section": "Expected return schema and rejection criteria",
+        "source_block_ordinal": 3,
+        "content_line_start": 339,
+        "content_line_end": 379
+      }
+    },
+    {
+      "id": "ch24-listing-004",
+      "chapter": 24,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch24/ch24-listing-004.yaml",
+        "sha256": "b144a048209466c7983f8ca9db1665c40a61a68944d8d20fdac13f418cf3b2b2"
+      },
+      "content_lines": 18,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-28-cut-over-and-roll-back-deliberately.md",
+        "sha256": "e738be5c2bc35a383ec60bae3cd022c05ce622f618a9f5b1651f95153992f92f",
+        "section": "Write the runbook as executable coordination",
+        "source_block_ordinal": 1,
+        "content_line_start": 98,
+        "content_line_end": 115
+      }
+    },
+    {
+      "id": "ch24-listing-005",
+      "chapter": 24,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch24/ch24-listing-005.json",
+        "sha256": "b22dcbc52a66eabf940d6760690995331a5c1058dbcf2592009f84ed0e2e6244"
+      },
+      "content_lines": 24,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-28-cut-over-and-roll-back-deliberately.md",
+        "sha256": "e738be5c2bc35a383ec60bae3cd022c05ce622f618a9f5b1651f95153992f92f",
+        "section": "Bound Claude Code to preparation and validation",
+        "source_block_ordinal": 2,
+        "content_line_start": 229,
+        "content_line_end": 252
+      }
+    },
+    {
+      "id": "ch25-listing-001",
+      "chapter": 25,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch25/ch25-listing-001.yaml",
+        "sha256": "24a7cf1c6437e1362f3dc0ad22abe592efad82b3338ddb3969913b8a538553c8"
+      },
+      "content_lines": 25,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-29-measure-outcomes-not-generated-code.md",
+        "sha256": "4098415b833d84414e941bf6b58bcce48250d67579bf8b0f25592fcc5f401577",
+        "section": "Establish the baseline before changing the method",
+        "source_block_ordinal": 1,
+        "content_line_start": 123,
+        "content_line_end": 147
+      }
+    },
+    {
+      "id": "ch26-listing-001",
+      "chapter": 26,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch26/ch26-listing-001.yaml",
+        "sha256": "bb2d7d91024565f1c8b7104cf3808c3f4946f9d1ee5e83195e44c637e58d4282"
+      },
+      "content_lines": 14,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-30-decommission-the-old-system-and-keep-the-new-one-changeable.md",
+        "sha256": "ac4cca23db07ddbfe1cd75038a83b872ce33ee78b2bee9e3197d862b85574e90",
+        "section": "Build consumer proof from independent lenses",
+        "source_block_ordinal": 1,
+        "content_line_start": 80,
+        "content_line_end": 93
+      }
+    },
+    {
+      "id": "ch26-listing-002",
+      "chapter": 26,
+      "language": "yaml",
+      "asset": {
+        "path": "book-assets/listings/ch26/ch26-listing-002.yaml",
+        "sha256": "ca969a5fdacb91075bb012bf35165a4ed070860792c2f71aadcced83fc593784"
+      },
+      "content_lines": 26,
+      "status": "illustrative",
+      "status_reason": "Contains an explicit example, placeholder, or omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-30-decommission-the-old-system-and-keep-the-new-one-changeable.md",
+        "sha256": "ac4cca23db07ddbfe1cd75038a83b872ce33ee78b2bee9e3197d862b85574e90",
+        "section": "Rehearse shutdown before destroying anything",
+        "source_block_ordinal": 2,
+        "content_line_start": 134,
+        "content_line_end": 159
+      }
+    },
+    {
+      "id": "ch26-listing-003",
+      "chapter": 26,
+      "language": "json",
+      "asset": {
+        "path": "book-assets/listings/ch26/ch26-listing-003.json",
+        "sha256": "c6724dbbde7f11d5dbe59ca5eb0bca4b91e4648f135ce2257774a777e8cd6fc1"
+      },
+      "content_lines": 23,
+      "status": "executable",
+      "status_reason": "Complete listing with no detected omission marker.",
+      "provenance": {
+        "path": "chapters/chapter-30-decommission-the-old-system-and-keep-the-new-one-changeable.md",
+        "sha256": "ac4cca23db07ddbfe1cd75038a83b872ce33ee78b2bee9e3197d862b85574e90",
+        "section": "Use Claude Code for inventory, not destruction",
+        "source_block_ordinal": 3,
+        "content_line_start": 238,
+        "content_line_end": 260
+      }
+    }
+  ]
+}

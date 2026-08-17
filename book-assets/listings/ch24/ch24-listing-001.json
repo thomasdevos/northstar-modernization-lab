@@ -1,0 +1,29 @@
+{
+  "pack_id": "NS-FEE-EVP-001",
+  "claim_type": "illustrative",
+  "pack_revision": 1,
+  "scope_decision": "DEC-FEE-001:replace-with-approved-revision",
+  "source": {
+    "repository": "replace-with-authorised-repository",
+    "commit": "replace-with-full-commit-id",
+    "review_record": "REV-FEE-001",
+    "tree_digest": "replace-with-verified-digest"
+  },
+  "ai_involvement": {
+    "task_ids": ["MIG-FEE-001", "EVD-FEE-001-CURATE"],
+    "actual_models": ["replace-with-reported-model"],
+    "claude_code_versions": ["replace-with-installed-version"],
+    "transcript_locations": ["replace-with-restricted-location"]
+  },
+  "build": {
+    "invocation_id": "replace-with-ci-run-id",
+    "builder_id": "replace-with-builder-identity",
+    "artifact_digest": "replace-with-sha256",
+    "provenance": "replace-with-attestation-location",
+    "verification": "not_run"
+  },
+  "evidence": [],
+  "exceptions": [],
+  "human_decisions": [],
+  "status": "incomplete"
+}

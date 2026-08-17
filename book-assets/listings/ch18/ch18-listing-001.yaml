@@ -1,0 +1,20 @@
+migration_id: DATA-FEE-01
+claim_type: illustrative
+source:
+  system: settlement-monolith
+  snapshot_id: replace-with-authorised-snapshot-id
+  start_position: replace-with-authorised-source-position
+target:
+  system: fee-service
+  write_mode: idempotent_upsert
+  authority: replica_only
+ranges:
+  - range_id: fee-0001
+    lower_inclusive: "000000000000"
+    upper_exclusive: "010000000000"
+    status: pending
+controls:
+  max_parallel_ranges: 2
+  on_mapping_error: quarantine_and_pause_threshold
+  on_unknown_schema: stop
+  retain_raw_source: according_to_data_policy

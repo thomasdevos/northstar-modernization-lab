@@ -1,0 +1,18 @@
+case_id: RP-FEE-01-C03-000042
+claim_type: illustrative
+input_fixture: cases/000042/input.json
+observed_output: cases/000042/observed-output.json
+clock:
+  mode: fixed
+  instant: "illustrative-tokenized-time"
+randomness:
+  mode: seeded
+  seed_ref: corpus-seed-03
+reference_data:
+  calendar_revision: CAL-ILL-04
+  fee_table_revision: FEE-ILL-11
+state_fixture: fixtures/state/000042.json
+side_effect_policy: record_only
+selection:
+  method: event_rule
+  rule: duplicate_detected

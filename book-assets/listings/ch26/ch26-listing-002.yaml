@@ -1,0 +1,26 @@
+retirement_id: RET-FEE-001
+claim_type: illustrative
+subject: legacy-fee-path
+phase: shutdown_rehearsal
+entry_evidence:
+  - approved_consumer_register_revision
+  - closed_cutover_observation_window
+  - archive_and_retention_decision
+  - rollback_expiry_decision
+steps:
+  - id: RET-010
+    action: fence legacy scheduler
+    reversible: true
+    owner: operations
+    expected_observation: no new legacy batch execution
+  - id: RET-020
+    action: revoke runtime route
+    reversible: true
+    owner: platform-engineering
+    expected_observation: candidate remains sole fee authority
+  - id: RET-030
+    action: remove database copy
+    reversible: false
+    owner: data-platform
+    gate: data-disposition-approval
+status: not_run

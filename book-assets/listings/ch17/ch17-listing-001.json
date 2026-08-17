@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "defaultMode": "dontAsk",
+    "allow": [
+      "Read(./src/legacy/fee/**)",
+      "Read(./contracts/approved/**)",
+      "Read(./evidence/approved/index/**)",
+      "Read(./build-logic/**)",
+      "Edit(./src/candidate/fee/**)",
+      "Edit(./src/test/semantic/**)",
+      "Edit(./migration/proposals/SEM-FEE-01/**)",
+      "Bash(./gradlew semanticCompatibilityTest *)",
+      "Bash(git diff *)"
+    ],
+    "deny": [
+      "Edit(./deploy/environments/**)",
+      "Edit(./evidence/approved/**)",
+      "Edit(./db/migration/**)",
+      "Read(./secrets/**)",
+      "Bash(curl *)",
+      "Bash(kubectl *)",
+      "Bash(docker push *)"
+    ]
+  }
+}

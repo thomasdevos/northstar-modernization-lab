@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["task_id", "model_record", "authority_states", "routes",
+               "cross_system_calls", "mappings", "debt_entries", "tests",
+               "commands", "files_changed", "unknowns", "human_decisions"],
+  "properties": {
+    "task_id": {"const": "STRANGLE-FEE-01"},
+    "model_record": {
+      "type": "object",
+      "required": ["reported_model", "claude_code_version", "revision"],
+      "properties": {
+        "reported_model": {"type": "string"},
+        "claude_code_version": {"type": "string"},
+        "revision": {"type": "string"}
+      }
+    },
+    "authority_states": {"type": "array", "items": {"type": "object"}},
+    "routes": {"type": "array", "items": {"type": "object"}},
+    "cross_system_calls": {"type": "array", "items": {"type": "object"}},
+    "mappings": {"type": "array", "items": {"type": "object"}},
+    "debt_entries": {"type": "array", "items": {"type": "object"}},
+    "tests": {"type": "array", "items": {"type": "object"}},
+    "commands": {"type": "array", "items": {"type": "object"}},
+    "files_changed": {"type": "array", "items": {"type": "string"}},
+    "unknowns": {"type": "array", "items": {"type": "string"}},
+    "human_decisions": {"type": "array", "items": {"type": "string"}}
+  }
+}

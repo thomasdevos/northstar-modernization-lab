@@ -1,0 +1,18 @@
+step_id: CUT-FEE-028
+claim_type: illustrative
+phase: authority_transfer
+action: enable candidate for approved cohort
+owner_role: release_engineer
+approver_role: cutover_authority
+preconditions:
+  - frozen_evidence_pack_digest_verified
+  - legacy_route_available
+  - candidate_digest_matches_pack
+  - reconciliation_job_healthy
+command_reference: runbooks/commands/enable-fee-cohort.md
+expected_observation: candidate_receipts_for_selected_cohort_only
+time_limit: replace-with-approved-duration
+on_success: CUT-FEE-029
+on_failure: PAUSE-FEE-004
+rollback_checkpoint: RB-FEE-003
+status: not_run

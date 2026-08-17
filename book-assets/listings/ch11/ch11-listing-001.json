@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(./src/fee/**)",
+      "Read(./contracts/**)",
+      "Read(./evidence/rules/**)",
+      "Read(./src/test/java/characterization/**)",
+      "Edit(./src/test/java/properties/**)",
+      "Edit(./evidence/properties/PROP-FEE-01/**)",
+      "Bash(./gradlew propertyTest *)"
+    ],
+    "deny": [
+      "Read(./secrets/**)",
+      "Read(./prod/**)",
+      "Bash(curl *)",
+      "Bash(ssh *)"
+    ]
+  }
+}

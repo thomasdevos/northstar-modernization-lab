@@ -1,0 +1,11 @@
+tolerance_id: TOL-TIME-FEE-01
+claim_type: illustrative
+dimension: timing
+field: fee_proposal_completed_at
+relation: same_operational_deadline_class
+absolute_difference_limit: none
+required_condition: both_before_approved_batch_close
+source: acceptance-contract-revision-required
+owner: operations-owner
+approver: cutover-authority
+status: proposed

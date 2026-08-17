@@ -1,0 +1,15 @@
+side_effects:
+  ledger_port:
+    mode: recording_adapter
+    outbound_network: denied
+  settlement_event:
+    mode: in_memory_sink
+    broker_credentials: absent
+  reconciliation_file:
+    mode: temporary_directory
+    path: build/replay-output
+  notification:
+    mode: blocked
+    expected_calls: 0
+unexpected_effect:
+  action: fail_case_and_stop_partition

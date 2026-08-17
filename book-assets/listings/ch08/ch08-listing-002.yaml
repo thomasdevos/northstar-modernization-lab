@@ -1,0 +1,11 @@
+case_id: CHAR-FEE-011
+fixture: FEE-ME-004
+status: expected_failure
+observed_difference: "illustrative output uses 10.00 while approved target is 11.00"
+claim_type: illustrative
+owner: settlement-product-owner
+containment: legacy path remains authoritative for affected product
+expires_on:
+  - approved correction is merged
+  - product leaves migration scope
+unexpected_pass_action: stop and review fixture reachability plus change record

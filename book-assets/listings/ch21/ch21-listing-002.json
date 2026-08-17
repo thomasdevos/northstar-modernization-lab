@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "defaultMode": "dontAsk",
+    "allow": [
+      "Read(./target/pit-reports/frozen/**)",
+      "Read(./evidence/approved/semantic-risks/**)",
+      "Read(./src/main/java/com/northstar/candidate/fee/**)",
+      "Read(./src/test/java/com/northstar/fee/**)",
+      "Edit(./tests/mutation-candidates/MUT-FEE-017/**)",
+      "Bash(mvn -q -Dtest=FeePolicyTest test)",
+      "Bash(git diff *)"
+    ],
+    "deny": [
+      "Edit(./src/main/**)",
+      "Edit(./pom.xml)",
+      "Edit(./evidence/approved/**)",
+      "Edit(./deploy/**)",
+      "Read(./prod/**)",
+      "Bash(curl *)",
+      "Bash(git push *)"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "case_id": "DIFF-FEE-001",
+  "status": "not_run",
+  "matches": [],
+  "differences": [],
+  "prohibited_effects": [],
+  "policy_revision": "fee-diff-v1",
+  "raw_packet_digests": {
+    "legacy": "replace-with-authorised-digest",
+    "candidate": "replace-with-authorised-digest"
+  },
+  "classification_required": true
+}

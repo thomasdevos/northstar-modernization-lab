@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Generated exercise evidence
+evidence/runs/*.csv
+evidence/claims/characterization.md
+
+# Local worktrees and editor state
+.worktrees/
+.vscode/
+.idea/

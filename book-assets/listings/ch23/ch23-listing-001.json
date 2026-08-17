@@ -1,0 +1,12 @@
+{
+  "claim_type": "illustrative",
+  "parallel_case_id": "PR-FEE-001:replace-with-retained-id",
+  "business_instruction_id": "replace-with-authorised-token",
+  "attempt": 2,
+  "idempotency_key": "replace-with-retained-key",
+  "path": "candidate",
+  "source_revision": "replace-with-reviewed-revision",
+  "policy_revision": "reconciliation-v1",
+  "observation_manifest": "replace-with-immutable-location",
+  "completion_state": "replace-with-observed-state"
+}

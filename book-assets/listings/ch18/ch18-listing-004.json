@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id", "model_record", "ownership_gaps", "mappings", "writers",
+    "backfill", "change_apply", "reconciliation", "rollback_dependencies",
+    "commands", "files_changed", "unknowns", "human_decisions"
+  ],
+  "properties": {
+    "task_id": {"const": "DATA-FEE-01"},
+    "model_record": {"type": "object"},
+    "ownership_gaps": {"type": "array", "items": {"type": "object"}},
+    "mappings": {"type": "array", "items": {"type": "object"}},
+    "writers": {"type": "array", "items": {"type": "object"}},
+    "backfill": {"type": "object"},
+    "change_apply": {"type": "object"},
+    "reconciliation": {"type": "object"},
+    "rollback_dependencies": {"type": "array", "items": {"type": "object"}},
+    "commands": {"type": "array", "items": {"type": "object"}},
+    "files_changed": {"type": "array", "items": {"type": "string"}},
+    "unknowns": {"type": "array", "items": {"type": "string"}},
+    "human_decisions": {"type": "array", "items": {"type": "string"}}
+  }
+}

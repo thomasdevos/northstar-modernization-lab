@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:northstar:task-return:1",
+  "type": "object",
+  "required": ["claims", "changed_files", "commands", "artifact_paths", "unknowns", "stop_reason"],
+  "properties": {
+    "claims": {"type": "array", "items": {"type": "object"}},
+    "changed_files": {"type": "array", "items": {"type": "string"}},
+    "commands": {"type": "array", "items": {"type": "object"}},
+    "artifact_paths": {"type": "array", "items": {"type": "string"}},
+    "unknowns": {"type": "array", "items": {"type": "string"}},
+    "stop_reason": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}

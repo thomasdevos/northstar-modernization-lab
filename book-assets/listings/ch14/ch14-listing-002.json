@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["task_id", "model_record", "call_path", "candidates",
+               "selected_draft", "tests", "commands", "files_changed",
+               "unknowns", "human_decisions"],
+  "properties": {
+    "task_id": {"const": "SEAM-FEE-01"},
+    "model_record": {
+      "type": "object",
+      "required": ["reported_model", "claude_code_version", "revision"],
+      "properties": {
+        "reported_model": {"type": "string"},
+        "claude_code_version": {"type": "string"},
+        "revision": {"type": "string"}
+      }
+    },
+    "call_path": {"type": "array", "items": {"type": "object"}},
+    "candidates": {"type": "array", "items": {"type": "object"}},
+    "selected_draft": {"type": "object"},
+    "tests": {"type": "array", "items": {"type": "object"}},
+    "commands": {"type": "array", "items": {"type": "object"}},
+    "files_changed": {"type": "array", "items": {"type": "string"}},
+    "unknowns": {"type": "array", "items": {"type": "string"}},
+    "human_decisions": {"type": "array", "items": {"type": "string"}}
+  }
+}

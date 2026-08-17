@@ -1,0 +1,8 @@
+{
+  "manifest_version": 1,
+  "artifacts": [
+    {"path": ".claude/settings.json", "schema": "schemas/claude-settings.schema.json", "format": "json", "required": true},
+    {"path": "compatibility/claude-code-2.1.170.json", "schema": "schemas/claude-compatibility.schema.json", "format": "json", "required": true},
+    {"path": "evidence/workspace/workspace-record.yaml", "schema": "schemas/workspace-record.schema.json", "format": "yaml-json-subset", "required": false}
+  ]
+}

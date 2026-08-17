@@ -1,0 +1,50 @@
+name: companion-lab
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-starting-state:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Record tool versions
+        run: |
+          python3 --version
+          make --version
+          git --version
+
+      - name: Run passing gates
+        run: |
+          make test
+          make policy
+          make baseline
+          make characterize
+
+      - name: Verify the intentional comparator failure
+        shell: bash
+        run: |
+          set +e
+          make compare > compare.log 2>&1
+          status=$?
+          set -e
+          cat compare.log
+          test "$status" -ne 0
+          grep -q "STL-1002" compare.log
+
+      - name: Verify the aggregate gate remains intentionally blocked
+        shell: bash
+        run: |
+          set +e
+          make verify > verify.log 2>&1
+          status=$?
+          set -e
+          cat verify.log
+          test "$status" -ne 0
+          grep -Fq "[0, 0, 1]" verify.log

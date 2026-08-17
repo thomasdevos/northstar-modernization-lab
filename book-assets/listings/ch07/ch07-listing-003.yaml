@@ -1,0 +1,33 @@
+id: RULE-FEE-018
+version: 1
+statement: "Illustrative: a replayed instruction must not create a second fee assessment"
+kind: prohibition
+claim_type: intended_policy
+status: hypothesis
+condition: "same instruction identity is received within the controlled replay window"
+outcome: "reuse or suppress the prior fee effect; create no additional ledger posting"
+exceptions: []
+evidence:
+  - id: EV-CONTRACT-044
+    type: contract
+    location: "contracts/reconciliation-feed.yaml#/instructionId"
+    revision: "illustrative-rev-a"
+    supports: "consumer correlates one fee effect to one instruction identity"
+    origin: "consumer-owned-contract"
+  - id: EV-REC-012
+    type: fixture
+    location: "fixtures/reconciliation/replay-accepted.json"
+    revision: "illustrative-rev-c"
+    supports: "retained example contains one fee line after duplicate input"
+    origin: "reconciliation-team-example"
+counter_evidence:
+  - "duplicate key expiry is not represented in the fixture"
+confidence:
+  label: medium
+  rationale: "independent origins agree, but the replay window and expiry path are unknown"
+  reviewed_by: "quality-review-pending"
+  reviewed_at: null
+consequence: critical
+contradictions: []
+next_action: "obtain the retention rule and replay just inside and outside its boundary"
+disposition: null

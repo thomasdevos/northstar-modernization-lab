@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id", "model_record", "input_revisions", "receipt_counts",
+    "unpaired_cases", "difference_groups", "commands", "files_changed",
+    "gaps", "human_decisions"
+  ],
+  "properties": {
+    "task_id": {"const": "PR-FEE-001-ANALYSE"},
+    "model_record": {"type": "object"},
+    "input_revisions": {"type": "array", "items": {"type": "object"}},
+    "receipt_counts": {"type": "object"},
+    "unpaired_cases": {"type": "array", "items": {"type": "object"}},
+    "difference_groups": {"type": "array", "items": {"type": "object"}},
+    "commands": {"type": "array", "items": {"type": "object"}},
+    "files_changed": {"type": "array", "items": {"type": "string"}},
+    "gaps": {"type": "array", "items": {"type": "string"}},
+    "human_decisions": {"type": "array", "items": {"type": "string"}}
+  }
+}

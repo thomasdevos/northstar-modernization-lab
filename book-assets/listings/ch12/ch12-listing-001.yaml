@@ -1,0 +1,24 @@
+replay_product_id: RP-FEE-01
+claim_type: illustrative
+purpose: detect semantic differences in the fee seam across observed input classes
+subject_boundary: fee-calculation adapter
+source_window: "approved production window, recorded at capture approval"
+prohibited_uses:
+  - customer investigation
+  - model training
+  - performance benchmarking
+  - production reprocessing
+required_context:
+  - canonical instruction fields
+  - business date
+  - route class
+  - reference-data revision
+excluded_content:
+  - name
+  - account number
+  - free-text operator note
+  - authentication header
+  - network address
+retention:
+  source_buffer: "hours, set by data owner"
+  sanitized_corpus: "days, set by evidence need and policy"

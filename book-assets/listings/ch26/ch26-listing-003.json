@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "defaultMode": "dontAsk",
+    "allow": [
+      "Read(./retirement/inventory/sanitized/**)",
+      "Read(./contracts/**)",
+      "Read(./deploy/**)",
+      "Edit(./evidence/proposals/RET-FEE-001/**)",
+      "Bash(python3 tools/retirement/validate_register.py *)",
+      "Bash(git diff *)"
+    ],
+    "deny": [
+      "Read(./secrets/**)",
+      "Edit(./retirement/accepted/**)",
+      "Bash(rm *)",
+      "Bash(kubectl *)",
+      "Bash(aws *)",
+      "Bash(curl *)",
+      "Bash(git push *)"
+    ]
+  }
+}

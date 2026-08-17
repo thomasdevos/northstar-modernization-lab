@@ -1,0 +1,15 @@
+{
+  "policy_id": "fee-diff-v1",
+  "fields": {
+    "/response/status": {"mode": "exact"},
+    "/response/amount": {"mode": "decimal_exact", "scale": 2},
+    "/response/currency": {"mode": "exact"},
+    "/response/generated_id": {"mode": "identity_map"},
+    "/events": {"mode": "ordered_contract"},
+    "/timing/elapsed_ms": {"mode": "retain_only"},
+    "/timing/completion_class": {"mode": "exact"},
+    "/prohibited_calls": {"mode": "must_be_empty"}
+  },
+  "unknown_field": "difference",
+  "missing_field": "difference"
+}

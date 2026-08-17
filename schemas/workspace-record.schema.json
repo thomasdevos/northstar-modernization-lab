@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:northstar:workspace-record:1",
+  "type": "object",
+  "required": ["source revision", "tool versions", "build command", "test command", "clean state", "evidence paths", "reviewer", "decision"],
+  "properties": {
+    "source revision": {"type": "string"},
+    "tool versions": {"type": "object"},
+    "build command": {"type": "string"},
+    "test command": {"type": "string"},
+    "clean state": {"type": "boolean"},
+    "evidence paths": {"type": "array", "items": {"type": "string"}},
+    "reviewer": {"type": "string"},
+    "decision": {"type": "string"}
+  }
+}

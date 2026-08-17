@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["task_id", "revision", "model_record", "raw_match", "differences", "rules", "commands", "files_changed", "human_decisions"],
+  "properties": {
+    "task_id": {"const": "GM-BATCH-001"},
+    "revision": {"type": "string", "minLength": 7},
+    "model_record": {
+      "type": "object",
+      "required": ["reported_model", "claude_code_version", "captured_at"],
+      "properties": {
+        "reported_model": {"type": "string"},
+        "claude_code_version": {"type": "string"},
+        "captured_at": {"type": "string", "format": "date-time"}
+      }
+    },
+    "raw_match": {"enum": ["yes", "no", "not_run"]},
+    "differences": {"type": "array", "items": {"type": "object"}},
+    "rules": {"type": "array", "items": {"type": "object"}},
+    "commands": {"type": "array", "items": {"type": "string"}},
+    "files_changed": {"type": "array", "items": {"type": "string"}},
+    "human_decisions": {"type": "array", "items": {"type": "string"}}
+  }
+}

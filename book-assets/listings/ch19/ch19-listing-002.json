@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id", "model_record", "base_revision", "input_revisions",
+    "behavior_evidence", "commands", "files_changed", "tests",
+    "assumptions", "unknowns", "human_decisions"
+  ],
+  "properties": {
+    "task_id": {"const": "MIG-FEE-03"},
+    "model_record": {
+      "type": "object",
+      "required": ["reported_model", "claude_code_version", "session_id"]
+    },
+    "base_revision": {"type": "string", "minLength": 7},
+    "input_revisions": {"type": "array", "items": {"type": "object"}},
+    "behavior_evidence": {"type": "array", "items": {"type": "object"}},
+    "commands": {"type": "array", "items": {"type": "object"}},
+    "files_changed": {"type": "array", "items": {"type": "string"}},
+    "tests": {"type": "array", "items": {"type": "object"}},
+    "assumptions": {"type": "array", "items": {"type": "string"}},
+    "unknowns": {"type": "array", "items": {"type": "string"}},
+    "human_decisions": {"type": "array", "items": {"type": "string"}}
+  }
+}

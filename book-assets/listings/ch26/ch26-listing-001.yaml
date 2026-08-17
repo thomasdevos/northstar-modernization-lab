@@ -1,0 +1,14 @@
+consumer_id: NS-CONSUMER-ILLUSTRATIVE-014
+claim_type: illustrative
+name: downstream-reconciliation-import
+interface: legacy-fee-output-v1
+owner_role: reconciliation-product-owner
+evidence:
+  declared_contract: contracts/legacy-fee-output-v1.yaml
+  static_reference: scheduler/reconciliation-import.yaml
+  runtime_identity: service.name=reconciliation-import
+  last_observed_use: not_observed
+  observation_window: replace-with-approved-window
+migration_state: unknown
+retirement_response: pending
+residual_risk: seasonal month-end path not yet observed

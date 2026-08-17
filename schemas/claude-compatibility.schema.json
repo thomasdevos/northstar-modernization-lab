@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:northstar:claude-compatibility:1",
+  "type": "object",
+  "required": ["manifest_version", "claude_code", "plan_session", "structured_output", "worktree"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "manifest_version": {"const": 1},
+    "claude_code": {
+      "type": "object",
+      "required": ["verified_version", "verification_status", "reviewed_on", "documentation"],
+      "properties": {
+        "verified_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+        "verification_status": {"enum": ["documentation-reviewed-not-locally-invoked", "locally-verified"]},
+        "reviewed_on": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+        "documentation": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "plan_session": {
+      "type": "object",
+      "required": ["permission_mode_flag", "permission_mode"],
+      "properties": {
+        "permission_mode_flag": {"const": "--permission-mode"},
+        "permission_mode": {"const": "plan"}
+      },
+      "additionalProperties": false
+    },
+    "structured_output": {
+      "type": "object",
+      "required": ["print_flag", "output_format", "output_format_flag", "schema_flag", "permission_mode_flag", "permission_mode"],
+      "properties": {
+        "print_flag": {"const": "-p"},
+        "output_format": {"const": "json"},
+        "output_format_flag": {"const": "--output-format"},
+        "schema_flag": {"const": "--json-schema"},
+        "permission_mode_flag": {"const": "--permission-mode"},
+        "permission_mode": {"const": "dontAsk"}
+      },
+      "additionalProperties": false
+    },
+    "worktree": {
+      "type": "object",
+      "required": ["flag", "requires_approved_revision", "requires_clean_base", "wrapper_uses_git_for_reviewed_base", "wrapper_executes_claude"],
+      "properties": {
+        "flag": {"const": "--worktree"},
+        "requires_approved_revision": {"const": true},
+        "requires_clean_base": {"const": true},
+        "wrapper_uses_git_for_reviewed_base": {"const": true},
+        "wrapper_executes_claude": {"const": true}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

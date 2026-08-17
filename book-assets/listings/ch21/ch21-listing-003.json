@@ -1,0 +1,15 @@
+{
+  "task_id": "MUT-FEE-017",
+  "model_record": {
+    "reported_model": "required-at-execution",
+    "claude_code_version": "required-at-execution"
+  },
+  "source_trace": [],
+  "covering_tests": [],
+  "distinguishing_input": {},
+  "oracle_evidence": [],
+  "candidate_files": [],
+  "commands": [],
+  "unknowns": [],
+  "human_decisions": []
+}

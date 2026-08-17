@@ -1,0 +1,17 @@
+{
+  "corpus_id": "RP-FEE-01-C03",
+  "claim_type": "illustrative",
+  "source_window_id": "SW-2026-07-ILL",
+  "selection_policy": {
+    "ordinary": {"method": "deterministic_probability", "rate": "illustrative"},
+    "strata": ["route_class", "currency_class", "outcome_class", "business_date_class"],
+    "event_rules": ["parser_rejection", "duplicate_detected", "month_end"]
+  },
+  "counts": {
+    "eligible_population": "unknown_until_retained_aggregate_exists",
+    "captured": "not_observed",
+    "sanitized": "not_observed",
+    "rejected_by_privacy_gate": "not_observed"
+  },
+  "frequency_inference_allowed": false
+}

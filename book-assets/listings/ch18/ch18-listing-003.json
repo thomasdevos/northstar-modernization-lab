@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "defaultMode": "dontAsk",
+    "allow": [
+      "Read(./contracts/approved/**)",
+      "Read(./fixtures/data-migration/**)",
+      "Read(./evidence/approved/index/**)",
+      "Edit(./migration/data/DATA-FEE-01/**)",
+      "Edit(./src/test/data-migration/**)",
+      "Bash(./gradlew dataMigrationFixtureTest *)",
+      "Bash(git diff *)"
+    ],
+    "deny": [
+      "Read(./secrets/**)",
+      "Read(./prod/**)",
+      "Edit(./deploy/**)",
+      "Edit(./db/production-migrations/**)",
+      "Edit(./evidence/approved/**)",
+      "Bash(psql *)",
+      "Bash(curl *)",
+      "Bash(kubectl *)"
+    ]
+  }
+}

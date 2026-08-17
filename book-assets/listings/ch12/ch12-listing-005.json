@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Read(./src/adapters/fee/**)",
+      "Read(./contracts/replay/**)",
+      "Read(./replay/sanitized-schema/**)",
+      "Read(./evidence/replay/approved-aggregates/**)",
+      "Edit(./src/test/replay/**)",
+      "Edit(./evidence/replay/REPLAY-FEE-01/**)",
+      "Bash(./gradlew replayTest *)"
+    ],
+    "deny": [
+      "Read(./capture/raw/**)",
+      "Read(./secrets/**)",
+      "Read(./prod/**)",
+      "Bash(curl *)",
+      "Bash(ssh *)",
+      "Bash(rm *)"
+    ]
+  }
+}

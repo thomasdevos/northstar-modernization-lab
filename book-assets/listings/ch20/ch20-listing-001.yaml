@@ -1,0 +1,22 @@
+case_id: DIFF-FEE-001
+claim_type: illustrative
+corpus_revision: fee-corpus-v1
+legacy_revision: replace-with-reviewed-commit
+candidate_revision: replace-with-reviewed-commit
+comparator_revision: diff-harness-v1
+acceptance_revision: fee-acceptance-v2
+input:
+  instruction: fixtures/differential/DIFF-FEE-001/instruction.json
+  prior_state: fixtures/differential/DIFF-FEE-001/prior-state.json
+controls:
+  instant: "2026-07-31T16:59:00Z"
+  timezone: Europe/London
+  locale: en-GB
+  calendar_revision: illustrative-calendar-v4
+  fee_table_revision: illustrative-fee-table-v7
+  identifier_seed: 41007
+routes:
+  ledger: recording-adapter
+  events: isolated-capture
+  network: denied
+expected_execution: not_run

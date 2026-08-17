@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(./fixtures/golden-master/**)",
+      "Read(./evidence/golden-master/GM-BATCH-001/**)",
+      "Edit(./tools/golden-master/**)",
+      "Edit(./tests/golden-master/**)",
+      "Bash(python3 tools/golden-master/normalize.py *)",
+      "Bash(python3 -m unittest tests/golden-master/*)"
+    ],
+    "deny": [
+      "Read(./secrets/**)",
+      "Read(./prod/**)",
+      "Bash(curl *)",
+      "Bash(ssh *)"
+    ]
+  }
+}

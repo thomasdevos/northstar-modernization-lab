@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:northstar:rule-record:1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "version", "statement", "kind", "claim_type", "status",
+    "condition", "outcome", "evidence", "counter_evidence",
+    "confidence", "consequence", "contradictions", "next_action"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^RULE-[A-Z]+-[0-9]{3}$" },
+    "version": { "type": "integer", "minimum": 1 },
+    "statement": { "type": "string", "minLength": 20 },
+    "kind": {
+      "enum": ["validation", "derivation", "eligibility", "routing",
+               "temporal", "state_transition", "authority", "exception",
+               "prohibition"]
+    },
+    "claim_type": { "enum": ["observed_behaviour", "intended_policy", "operational_practice"] },
+    "status": { "enum": ["hypothesis", "reviewed", "approved", "rejected", "superseded"] },
+    "condition": { "type": ["string", "null"] },
+    "outcome": { "type": "string", "minLength": 5 },
+    "exceptions": { "type": "array", "items": { "type": "string" } },
+    "evidence": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "location", "revision", "supports", "origin"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "enum": ["code", "test", "fixture", "runbook", "contract", "observation", "expert"] },
+          "location": { "type": "string" },
+          "revision": { "type": "string" },
+          "supports": { "type": "string" },
+          "origin": { "type": "string" }
+        }
+      }
+    },
+    "counter_evidence": { "type": "array", "items": { "type": "string" } },
+    "confidence": {
+      "type": "object",
+      "required": ["label", "rationale", "reviewed_by", "reviewed_at"],
+      "properties": {
+        "label": { "enum": ["low", "medium", "high"] },
+        "rationale": { "type": "string" },
+        "reviewed_by": { "type": "string" },
+        "reviewed_at": { "type": ["string", "null"], "format": "date" }
+      }
+    },
+    "consequence": { "enum": ["low", "material", "critical"] },
+    "contradictions": { "type": "array", "items": { "type": "string" } },
+    "next_action": { "type": "string", "minLength": 10 },
+    "disposition": {
+      "type": ["object", "null"],
+      "properties": {
+        "decision": { "enum": ["preserve", "correct", "retire", "defer"] },
+        "decided_by": { "type": "string" },
+        "approval_record": { "type": "string" }
+      }
+    }
+  }
+}

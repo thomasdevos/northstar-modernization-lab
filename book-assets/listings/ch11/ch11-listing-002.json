@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["task_id", "model_record", "invariants", "generators", "properties",
+               "relations", "counterexamples", "commands", "files_changed",
+               "unknowns", "human_decisions"],
+  "properties": {
+    "task_id": {"const": "PROP-FEE-01"},
+    "model_record": {
+      "type": "object",
+      "required": ["reported_model", "claude_code_version"],
+      "properties": {
+        "reported_model": {"type": "string"},
+        "claude_code_version": {"type": "string"}
+      }
+    },
+    "invariants": {"type": "array", "items": {"type": "object"}},
+    "generators": {"type": "array", "items": {"type": "object"}},
+    "properties": {"type": "array", "items": {"type": "object"}},
+    "relations": {"type": "array", "items": {"type": "object"}},
+    "counterexamples": {"type": "array", "items": {"type": "object"}},
+    "commands": {"type": "array", "items": {"type": "string"}},
+    "files_changed": {"type": "array", "items": {"type": "string"}},
+    "unknowns": {"type": "array", "items": {"type": "string"}},
+    "human_decisions": {"type": "array", "items": {"type": "string"}}
+  }
+}

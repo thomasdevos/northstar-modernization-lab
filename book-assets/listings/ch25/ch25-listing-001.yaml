@@ -1,0 +1,25 @@
+measurement_id: NS-FEE-M29-001
+claim_type: illustrative
+unit: accepted_slice
+scope_revision: replace-with-approved-revision
+comparison_method: within_slice_process_baseline
+window:
+  start: replace-with-observed-time
+  end: replace-with-observed-time
+segments:
+  discovery: not_observed
+  test_creation: not_observed
+  implementation: not_observed
+  review: not_observed
+  rework: not_observed
+  cutover_and_observation: not_observed
+cost_inclusions:
+  - human_loaded_cost
+  - model_and_platform_cost
+  - test_infrastructure
+  - parallel_run_infrastructure
+  - external_assurance
+cost_exclusions: []
+quality_policy: contracts/measurement/quality-v1.yaml
+retirement_boundary: legacy_fee_path_still_available
+owner: modernization_measurement_owner

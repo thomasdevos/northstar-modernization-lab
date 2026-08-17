@@ -1,0 +1,20 @@
+baseline_id: GM-BATCH-001-B01
+claim_type: illustrative
+source_revision: reviewed-revision-placeholder
+corpus_manifest: evidence/golden-master/GM-BATCH-001/corpus.json
+received_digest: replace-with-authorised-run-digest
+normalized_digest: replace-with-authorised-run-digest
+normalizer_revision: normalize-ns-batch-v1
+classification: observed_unreviewed
+changes_from_prior: none_first_baseline
+reviewers:
+  quality: pending
+  domain: pending
+  operations: pending
+  evidence_custodian: pending
+expiry_triggers:
+  - corpus revision changes
+  - calendar revision changes
+  - output contract changes
+  - normalizer changes
+  - side_effect_route changes

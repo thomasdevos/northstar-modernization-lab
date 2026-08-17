@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:northstar:settings-policy:1",
+  "type": "object",
+  "required": ["$schema", "permissions", "sandbox", "hooks"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "permissions": {
+      "type": "object",
+      "required": ["defaultMode", "allow", "deny"],
+      "properties": {
+        "defaultMode": {"const": "dontAsk"},
+        "allow": {"type": "array", "items": {"type": "string"}},
+        "deny": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "sandbox": {
+      "type": "object",
+      "required": ["enabled", "allowUnsandboxedCommands", "failIfUnavailable", "filesystem"],
+      "properties": {
+        "enabled": {"const": true},
+        "allowUnsandboxedCommands": {"const": false},
+        "failIfUnavailable": {"const": true},
+        "filesystem": {
+          "type": "object",
+          "required": ["denyWrite"],
+          "properties": {"denyWrite": {"type": "array", "items": {"type": "string", "pattern": "^\\./"}}}
+        }
+      }
+    },
+    "hooks": {"type": "object", "required": ["PreToolUse"]}
+  }
+}

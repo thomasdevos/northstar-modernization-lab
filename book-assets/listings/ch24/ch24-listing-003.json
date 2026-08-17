@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id", "model_record", "input_manifest_digest", "claims",
+    "broken_links", "identity_mismatches", "missing_fields", "exceptions",
+    "commands", "files_changed", "unknowns", "human_decisions_required"
+  ],
+  "properties": {
+    "task_id": {"const": "EVD-FEE-001-CURATE"},
+    "model_record": {
+      "type": "object",
+      "required": ["reported_model", "claude_code_version", "captured_at"]
+    },
+    "input_manifest_digest": {"type": "string"},
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "status", "references", "limitations"],
+        "properties": {
+          "claim": {"type": "string"},
+          "status": {
+            "enum": ["supported_reference", "partial_reference", "unsupported"]
+          },
+          "references": {"type": "array", "items": {"type": "string"}},
+          "limitations": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "broken_links": {"type": "array", "items": {"type": "object"}},
+    "identity_mismatches": {"type": "array", "items": {"type": "object"}},
+    "missing_fields": {"type": "array", "items": {"type": "object"}},
+    "exceptions": {"type": "array", "items": {"type": "object"}},
+    "commands": {"type": "array", "items": {"type": "object"}},
+    "files_changed": {"type": "array", "items": {"type": "string"}},
+    "unknowns": {"type": "array", "items": {"type": "string"}},
+    "human_decisions_required": {"type": "array", "items": {"type": "string"}}
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "trace_id": "TRACE-GBP-ACCEPTED-01",
+  "hop": "H07",
+  "claim": "illustrative ledger export derives amount from batch result",
+  "input": "fee-result:v3",
+  "output": "ledger-record:v5",
+  "time_basis": "processing_date",
+  "sources": ["batch/export.cbl:410-468", "schemas/ledger-v5.xsd"],
+  "status": "hypothesis",
+  "confidence": "medium",
+  "contradiction": "runbook names value_date",
+  "next_check": "replay synthetic month-end fixture"
+}

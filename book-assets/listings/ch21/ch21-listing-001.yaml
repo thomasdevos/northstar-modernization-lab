@@ -1,0 +1,20 @@
+survivor_id: MUT-FEE-017
+claim_type: illustrative
+source_revision: replace-with-reviewed-commit
+pit_report_digest: replace-with-authorised-digest
+class: com.northstar.candidate.fee.FeePolicy
+source_line: 84
+mutator: CONDITIONALS_BOUNDARY
+change: ">= replaced with >"
+risk_row: SEM-FEE-THRESHOLD-01
+covering_tests:
+  - FeePolicyTest.aboveThresholdUsesReducedFee
+status: review_required
+possible_dispositions:
+  - weak_oracle
+  - missing_boundary_case
+  - equivalent
+  - unreachable
+  - out_of_scope
+human_owner: quality-engineer
+business_reviewer: fee-domain-owner

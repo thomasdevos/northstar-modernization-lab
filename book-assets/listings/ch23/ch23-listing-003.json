@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "defaultMode": "dontAsk",
+    "allow": [
+      "Read(./evidence/reconciliation/sanitized/**)",
+      "Read(./contracts/reconciliation/**)",
+      "Read(./src/reconciliation/**)",
+      "Edit(./evidence/proposals/REC-FEE-001/**)",
+      "Bash(python3 -m unittest tests/reconciliation/*)",
+      "Bash(git diff *)"
+    ],
+    "deny": [
+      "Read(./evidence/reconciliation/raw/**)",
+      "Edit(./evidence/approved/**)",
+      "Edit(./contracts/reconciliation/approved/**)",
+      "Edit(./deploy/**)",
+      "Bash(curl *)",
+      "Bash(kubectl *)",
+      "Bash(git push *)"
+    ]
+  }
+}

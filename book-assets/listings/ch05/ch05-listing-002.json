@@ -1,0 +1,31 @@
+{
+  "claim_id": "RT-0042",
+  "claim": "Illustrative fee batch is started by scheduler step FEE_20",
+  "scope": {
+    "environment": "production",
+    "outcome": "accepted GBP to ledger export",
+    "observed_from": "2026-06-01T00:00:00Z",
+    "observed_to": "2026-06-30T23:59:59Z"
+  },
+  "subject": "process:fee-batch",
+  "relation": "started_by",
+  "object": "scheduler-step:NS_EOD/FEE_20",
+  "evidence": [
+    {
+      "kind": "scheduler-definition",
+      "locator": "scheduler/ns-eod.yaml:88-116",
+      "revision": "illustrative-revision-7"
+    },
+    {
+      "kind": "redacted-execution-record",
+      "locator": "telemetry/redacted/job-runs-202606.csv:201-230",
+      "revision": "snapshot-2026-07-01"
+    }
+  ],
+  "status": "supported",
+  "confidence": "high",
+  "contradictions": [],
+  "unknowns": ["whether operations can start the process outside this chain"],
+  "next_check": "review approved recovery procedure with scheduler owner",
+  "reviewer": "unassigned"
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "../schemas/claude-compatibility.schema.json",
+  "manifest_version": 1,
+  "claude_code": {
+    "verified_version": "2.1.170",
+    "verification_status": "documentation-reviewed-not-locally-invoked",
+    "reviewed_on": "2026-07-24",
+    "documentation": [
+      "https://code.claude.com/docs/en/cli-reference",
+      "https://code.claude.com/docs/en/headless",
+      "https://code.claude.com/docs/en/settings",
+      "https://code.claude.com/docs/en/permissions",
+      "https://code.claude.com/docs/en/permission-modes",
+      "https://code.claude.com/docs/en/sandboxing",
+      "https://code.claude.com/docs/en/hooks",
+      "https://code.claude.com/docs/en/worktrees"
+    ]
+  },
+  "plan_session": {
+    "permission_mode_flag": "--permission-mode",
+    "permission_mode": "plan"
+  },
+  "structured_output": {
+    "print_flag": "-p",
+    "output_format": "json",
+    "output_format_flag": "--output-format",
+    "schema_flag": "--json-schema",
+    "permission_mode_flag": "--permission-mode",
+    "permission_mode": "dontAsk"
+  },
+  "worktree": {
+    "flag": "--worktree",
+    "requires_approved_revision": true,
+    "requires_clean_base": true,
+    "wrapper_uses_git_for_reviewed_base": true,
+    "wrapper_executes_claude": true
+  }
+}

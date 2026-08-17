@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "defaultMode": "dontAsk",
+    "allow": [
+      "Read(./evidence/index/sanitized/**)",
+      "Read(./evidence/packs/NS-FEE-EVP-001/manifest.json)",
+      "Read(./contracts/evidence/**)",
+      "Read(./tools/evidence/**)",
+      "Edit(./evidence/proposals/EVD-FEE-001/**)",
+      "Bash(python3 tools/evidence/validate_pack.py *)",
+      "Bash(git diff *)"
+    ],
+    "deny": [
+      "Read(./evidence/raw/**)",
+      "Read(./secrets/**)",
+      "Edit(./evidence/accepted/**)",
+      "Edit(./contracts/evidence/approved/**)",
+      "Edit(./deploy/**)",
+      "Bash(curl *)",
+      "Bash(gh api *)",
+      "Bash(git push *)"
+    ]
+  }
+}

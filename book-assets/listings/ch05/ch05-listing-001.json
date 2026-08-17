@@ -1,0 +1,27 @@
+{
+  "claim_id": "DEP-0001",
+  "subject_component_id": "CMP-FEE-FACADE",
+  "relationship": "loads",
+  "object_id": "BIN-CALENDAR-BRIDGE",
+  "environment": "production-candidate",
+  "selector": "calendar.provider",
+  "evidence": [
+    {
+      "repository": "settlement-monolith",
+      "revision": "REQUIRED_REAL_REVISION",
+      "path": "config/fees.properties",
+      "locator": "calendar.provider",
+      "evidence_type": "configured",
+      "collection_method": "read-only file inspection",
+      "collected_at": "REQUIRED_TIMESTAMP"
+    }
+  ],
+  "status": "hypothesis",
+  "confidence": "medium",
+  "confidence_reason": "configuration and packaging agree; runtime load unobserved",
+  "contradictions": [],
+  "owner_role": "technical steward unknown",
+  "risk_dimensions": ["behavioural consequence", "evidence uncertainty"],
+  "next_check": "verify effective binding and class load in approved runtime evidence",
+  "reviewer": "REQUIRED_HUMAN_ROLE"
+}

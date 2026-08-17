@@ -1,0 +1,11 @@
+{
+  "operation_identity": "ILLUSTRATIVE-INSTRUCTION|FEE-TYPE|RULE-REV|GEN-1",
+  "source_system": "settlement-monolith",
+  "source_position": "replace-with-authorised-position",
+  "source_transaction": "replace-with-authorised-transaction-id",
+  "mapping_revision": "fee-map-v1",
+  "apply_state": "not_run",
+  "target_revision": null,
+  "first_seen_at": null,
+  "last_seen_at": null
+}

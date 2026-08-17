@@ -1,0 +1,23 @@
+decision_right_id: DR-REPLAY-004
+capability: late settlement file recovery
+decision: authorise one bounded queue replay
+accountable_role: batch operations lead
+deputy_role: duty operations manager
+responsible_role: authorised batch operator
+required_consultation:
+  - reconciliation owner confirms no prior ledger posting
+preconditions:
+  - incident record is open
+  - business date and message count are recorded
+  - deduplication check has passed
+limits:
+  - one queue and one business date
+  - no purge or manual ledger adjustment
+evidence:
+  - approved service authority register, revision 12
+confidence: verified
+escalation: service incident commander
+expires_on:
+  - accountable or deputy role changes
+  - queue contract or replay control changes
+  - rehearsal age exceeds 90 days

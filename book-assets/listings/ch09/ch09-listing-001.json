@@ -1,0 +1,27 @@
+{
+  "case_id": "GM-BATCH-001",
+  "claim_type": "illustrative",
+  "repository_revision": "reviewed-revision-placeholder",
+  "corpus": {
+    "path": "fixtures/golden-master/ns-batch-v1/input.dat",
+    "sha256": "replace-with-digest-from-authorised-run",
+    "generator_revision": "corpus-generator-v1",
+    "seed": 41007,
+    "record_count": 48,
+    "partitions": ["ordinary", "boundary", "calendar", "invalid", "duplicate", "recovery"]
+  },
+  "controls": {
+    "instant": "2026-07-31T16:59:00Z",
+    "timezone": "Europe/London",
+    "business_date": "2026-07-31",
+    "calendar_revision": "illustrative-calendar-v4",
+    "locale": "en-GB",
+    "encoding": "UTF-8",
+    "database_seed": "ns-batch-seed-v1"
+  },
+  "routes": {
+    "ledger": "recording-adapter",
+    "messages": "isolated-capture",
+    "output": "build/golden-master/GM-BATCH-001/received"
+  }
+}

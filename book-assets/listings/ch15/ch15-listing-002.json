@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "defaultMode": "dontAsk",
+    "allow": [
+      "Read(./src/main/**)",
+      "Read(./contracts/approved/**)",
+      "Read(./deploy/templates/**)",
+      "Read(./evidence/approved/index/**)",
+      "Edit(./migration/proposals/STRANGLE-FEE-01/**)",
+      "Edit(./src/test/strangler/**)",
+      "Bash(./gradlew stranglerContractTest *)",
+      "Bash(git diff *)"
+    ],
+    "deny": [
+      "Edit(./deploy/environments/**)",
+      "Edit(./evidence/approved/**)",
+      "Read(./secrets/**)",
+      "Bash(kubectl *)",
+      "Bash(helm *)",
+      "Bash(curl *)"
+    ]
+  }
+}

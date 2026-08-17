@@ -1,0 +1,14 @@
+mapping_id: ACL-FEE-STATUS-01
+claim_type: illustrative
+legacy:
+  field: fee_status
+  value: "A"
+  source: contracts/legacy-fee-output.yaml
+candidate:
+  field: decision.status
+  value: APPLIED
+semantic_claim: same reviewed fee-applied outcome
+approved_rule_ref: RULE-FEE-STATUS-07
+unknown_handling: block_and_record
+owner_role: domain-owner
+removal_trigger: all named legacy callers retired

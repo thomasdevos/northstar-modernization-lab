@@ -1,0 +1,52 @@
+contract_id: ACC-FEE-01
+claim_type: illustrative
+slice: fee-calculation-adapter
+status: draft_for_human_approval
+revisions:
+  legacy: required_at_execution
+  candidate: required_at_execution
+  comparator: required_at_execution
+input_sets:
+  - characterization-corpus-version
+  - golden-master-version
+  - property-seed-records
+  - approved-replay-corpus-version
+acceptance:
+  business:
+    fee_amount_currency:
+      comparator: exact_decimal_and_currency
+      result: required_match
+    intended_changes:
+      allowed_ids: []
+  interfaces:
+    reconciliation_file:
+      comparator: ordered_contract_comparator
+      result: required_match
+  side_effects:
+    ledger_calls:
+      comparator: semantic_payload_and_exact_count
+      result: required_match
+    unexpected_destination:
+      action: stop_and_block
+  operations:
+    latency_p99:
+      threshold: unset_until_baseline_review
+      minimum_samples: unset_until_baseline_review
+      action_on_breach: pause
+    telemetry_completeness:
+      threshold: unset_until_instrumentation_review
+      action_on_breach: invalidate_evidence
+rollback:
+  authority_role: release-authority
+  automatic_stop_events:
+    - unexpected-outbound-destination
+    - duplicate-ledger-effect
+  rehearsal_required: true
+  old_reader_compatibility_required: true
+  reconciliation_owner: finance-control-owner
+human_decisions:
+  - approve-comparators-and-tolerances
+  - approve-intended-changes
+  - authorize-release
+  - authorize-rollback
+  - accept-reconciliation

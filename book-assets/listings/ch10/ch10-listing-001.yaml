@@ -1,0 +1,22 @@
+interface_id: IF-RECON-FILE-01
+claim_type: illustrative
+provider: northstar-settlement-batch
+transport: managed-file-transfer
+artefact: NSSETTLE_YYYYMMDD_01.dat
+encoding: UTF-8
+consumers:
+  - id: reconciliation-loader
+    owner: finance-reconciliation
+    evidence:
+      - source/parser/SettlementFileReader.java
+      - runbooks/recon-import.md
+    status: confirmed_in_scope
+  - id: regulatory-extract-copy
+    owner: unknown
+    evidence:
+      - scheduler/job-copy-recon-file.xml
+    status: hypothesis_requires_trace
+contract_layers:
+  structure: contracts/recon-file-v1.yaml
+  semantics: contracts/recon-file-semantics-v1.md
+  operation: contracts/recon-delivery-v1.yaml

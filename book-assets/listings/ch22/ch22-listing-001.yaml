@@ -1,0 +1,33 @@
+run_id: PR-FEE-001
+claim_type: illustrative
+mode: mirrored_transaction
+legacy_revision: replace-with-reviewed-revision
+candidate_revision: replace-with-reviewed-revision
+router_revision: replace-with-reviewed-revision
+comparator_policy: fee-diff-v1
+population:
+  source: authorised-live-request-copy
+  inclusion: fee-eligible-settlement-instructions
+  exclusions:
+    - restricted-jurisdiction-until-data-approval
+    - manual-repair-queue
+  sample_percentage: 5
+schedule:
+  start: pending-human-approval
+  stop: pending-human-approval
+  required_cycles:
+    - ordinary-business-day
+    - month-end
+    - approved-holiday-adjacency
+production_authority: legacy
+candidate_routes:
+  database: isolated-shadow-store
+  ledger: recording-adapter
+  events: isolated-capture
+  email: blocked
+  network_default: denied
+capacity:
+  candidate_concurrency_limit: replace-after-load-test
+  queue_depth_pause: replace-after-capacity-review
+  legacy_latency_pause: replace-after-capacity-review
+exit_state: not_started

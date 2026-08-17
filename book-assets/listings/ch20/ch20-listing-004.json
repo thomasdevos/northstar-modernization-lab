@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "defaultMode": "dontAsk",
+    "allow": [
+      "Read(./contracts/approved/**)",
+      "Read(./fixtures/differential/**)",
+      "Read(./evidence/approved/index/**)",
+      "Edit(./tools/differential/**)",
+      "Edit(./tests/differential/**)",
+      "Edit(./evidence/proposals/DIFF-FEE-001/**)",
+      "Bash(python3 -m unittest tests/differential/*)",
+      "Bash(git diff *)"
+    ],
+    "deny": [
+      "Read(./prod/**)",
+      "Read(./secrets/**)",
+      "Edit(./src/legacy/**)",
+      "Edit(./src/candidate/**)",
+      "Edit(./evidence/approved/**)",
+      "Bash(curl *)",
+      "Bash(kubectl *)",
+      "Bash(git push *)"
+    ]
+  }
+}

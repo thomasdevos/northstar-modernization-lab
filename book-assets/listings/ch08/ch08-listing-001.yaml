@@ -1,0 +1,28 @@
+fixture_id: FEE-ME-004
+status: candidate
+input:
+  instruction_id: NS-ILLUSTRATIVE-0042
+  product: LEGACY_GBP_A
+  currency: GBP
+  amount: "10.99"
+controls:
+  instant: "2026-07-31T16:59:00Z"
+  timezone: Europe/London
+  business_date: "2026-07-31"
+  calendar_version: illustrative-uk-v4
+  random_seed: 41007
+  locale: en-GB
+  encoding: UTF-8
+  feature_flags:
+    month_end_fee_path: true
+state_seed:
+  dataset: fixtures/db/fee-me-004.sql
+  expected_precondition_count: 1
+side_effect_routes:
+  ledger: recording-adapter
+  events: in-memory-capture
+  files: build/char/FEE-ME-004/out
+prohibited:
+  - production credentials
+  - public network access
+  - shared test queue
