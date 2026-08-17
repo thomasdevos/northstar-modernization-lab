@@ -1,33 +1,42 @@
-.PHONY: test test-legacy baseline characterize compare verify policy schemas compatibility clean
+.PHONY: check-environment test test-legacy baseline characterize compare verify policy schemas book-assets compatibility compatibility-live clean
 
 PYTHON := python3
 
-test:
+check-environment:
+	$(PYTHON) scripts/check_environment.py
+
+test: check-environment
 	$(PYTHON) -m unittest discover -s tests -v
 
-schemas:
+schemas: check-environment
 	$(PYTHON) scripts/validate_artifacts.py
 
-compatibility:
+book-assets: check-environment
+	$(PYTHON) scripts/validate_book_assets.py
+
+compatibility: check-environment
 	$(PYTHON) scripts/claude_compat.py check
 
-policy: schemas compatibility
-	$(PYTHON) -m unittest tests.test_protect_files tests.test_settings_policy tests.test_validate_artifacts tests.test_claude_compat -v
+compatibility-live: check-environment
+	$(PYTHON) scripts/claude_compat.py live-check
 
-test-legacy:
+policy: schemas book-assets compatibility
+	$(PYTHON) -m unittest tests.test_protect_files tests.test_settings_policy tests.test_validate_artifacts tests.test_book_assets tests.test_claude_compat -v
+
+test-legacy: check-environment
 	$(PYTHON) -m unittest tests.test_legacy -v
 
-baseline:
+baseline: check-environment
 	$(PYTHON) scripts/baseline.py
 
-characterize:
+characterize: check-environment
 	$(PYTHON) scripts/characterize.py
 
-compare:
+compare: check-environment
 	$(PYTHON) scripts/compare.py
 
-verify:
+verify: check-environment
 	$(PYTHON) scripts/verify.py
 
 clean:
-	rm -f evidence/runs/*.csv evidence/claims/characterization.md
+	rm -f evidence/runs/*.csv evidence/runs/*.json evidence/runs/*.log evidence/claims/characterization.md

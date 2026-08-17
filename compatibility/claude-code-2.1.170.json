@@ -3,8 +3,8 @@
   "manifest_version": 1,
   "claude_code": {
     "verified_version": "2.1.170",
-    "verification_status": "documentation-reviewed-not-locally-invoked",
-    "reviewed_on": "2026-07-24",
+    "verification_status": "local-version-check-only",
+    "reviewed_on": "2026-08-17",
     "documentation": [
       "https://code.claude.com/docs/en/cli-reference",
       "https://code.claude.com/docs/en/headless",

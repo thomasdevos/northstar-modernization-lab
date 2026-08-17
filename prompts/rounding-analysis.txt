@@ -1,0 +1,11 @@
+Analyze the intentional STL-1002 rounding mismatch in the Northstar lab.
+
+Constraints:
+- Remain inside this repository.
+- Do not modify legacy_app/ or fixtures/golden-master/.
+- Do not use network access, production data, credentials, or external directories.
+- Reproduce the mismatch using the documented Make targets.
+- Distinguish observed evidence from conclusions.
+- Do not implement a change in this analysis task.
+
+Return the structured fields required by contracts/returns/task-return.schema.json. Record commands with their actual exit status. Use repository-relative paths only. Set stop_reason to null if the bounded analysis completed; otherwise explain why it stopped.

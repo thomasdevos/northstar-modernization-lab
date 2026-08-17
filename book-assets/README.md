@@ -1,7 +1,11 @@
 # Practical handbook book assets
 
-This catalog contains the full JSON and YAML listings referenced at their points of use in the numbered chapters.
-The files preserve the inherited listing content exactly. Status describes completeness, not production approval.
+This catalog contains the full JSON and YAML listings referenced at their points of use in the numbered practical chapters.
+The files preserve the inherited listing content exactly. Status describes textual completeness, not independent runnability or production approval. In particular, `executable` means no omission marker was detected; environment-specific values and prerequisites still require validation.
+
+The **Chapter** column uses practical-book numbering. Manifest provenance paths refer to the separately licensed source-manuscript revision and are intentionally not resolvable inside this MIT-licensed repository. The manifest retains those source paths, source hashes, sections, and line ranges as extraction provenance.
+
+Run `make book-assets` to verify this catalog, all public listing files, SHA-256 values, line counts, and complete JSON syntax.
 
 Listings: 70 total, 41 executable, 29 illustrative.
 

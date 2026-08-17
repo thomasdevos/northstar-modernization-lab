@@ -12,9 +12,21 @@ from pathlib import Path
 from typing import Any
 
 try:
-    from scripts.validate_artifacts import ROOT, ValidationError, load_data, validate
+    from scripts.validate_artifacts import (
+        ROOT,
+        ValidationError,
+        load_data,
+        validate,
+        validate_schema_dialect,
+    )
 except ModuleNotFoundError:  # Direct execution adds scripts/, not its parent, to sys.path.
-    from validate_artifacts import ROOT, ValidationError, load_data, validate
+    from validate_artifacts import (
+        ROOT,
+        ValidationError,
+        load_data,
+        validate,
+        validate_schema_dialect,
+    )
 
 MANIFEST = ROOT / "compatibility/claude-code-2.1.170.json"
 MANIFEST_SCHEMA = ROOT / "schemas/claude-compatibility.schema.json"
@@ -37,8 +49,19 @@ def git(path: Path, *args: str) -> str:
 
 
 def validate_approved_base(path: Path, approved_revision: str) -> str:
+    path = path.resolve()
     if git(path, "rev-parse", "--is-inside-work-tree") != "true":
         raise ValidationError("approved base is not a Git worktree")
+    top_level = Path(git(path, "rev-parse", "--show-toplevel")).resolve()
+    if top_level != path:
+        raise ValidationError("approved base must be the root of the lab worktree")
+    required_lab_files = (
+        path / "CLAUDE.md",
+        path / ".claude/settings.json",
+        path / "compatibility/claude-code-2.1.170.json",
+    )
+    if not all(candidate.is_file() for candidate in required_lab_files):
+        raise ValidationError("approved base is not a Northstar lab worktree")
     actual = git(path, "rev-parse", "HEAD")
     approved = git(path, "rev-parse", f"{approved_revision}^{{commit}}")
     if actual != approved:
@@ -50,6 +73,18 @@ def validate_approved_base(path: Path, approved_revision: str) -> str:
 
 def claude_executable(value: str | None) -> str:
     return value or os.environ.get("CLAUDE_BIN", "claude")
+
+
+def require_within_lab(path: Path, label: str, *, file: bool = False) -> Path:
+    resolved = path.resolve()
+    root = ROOT.resolve()
+    if not resolved.is_relative_to(root):
+        raise ValidationError(f"{label} must stay within the Northstar lab")
+    if file and not resolved.is_file():
+        raise ValidationError(f"{label} must be an existing file")
+    if not file and not resolved.is_dir():
+        raise ValidationError(f"{label} must be an existing directory")
+    return resolved
 
 
 def validate_declared_compatibility(executable: str, manifest: dict[str, Any]) -> None:
@@ -91,8 +126,11 @@ def build_structured_command(
 
 
 def extract_structured_output(stdout: str, schema: dict[str, Any]) -> Any:
+    def reject_constant(value: str) -> None:
+        raise ValidationError(f"Claude CLI returned non-finite JSON number: {value}")
+
     try:
-        envelope = json.loads(stdout)
+        envelope = json.loads(stdout, parse_constant=reject_constant)
     except json.JSONDecodeError as exc:
         raise ValidationError(f"Claude CLI returned invalid JSON: {exc.msg}") from exc
     if not isinstance(envelope, dict) or "structured_output" not in envelope:
@@ -111,7 +149,9 @@ def add_common_executable_argument(command: argparse.ArgumentParser) -> None:
 def parser() -> argparse.ArgumentParser:
     result = argparse.ArgumentParser(description=__doc__)
     sub = result.add_subparsers(dest="action", required=True)
-    sub.add_parser("check")
+    sub.add_parser("check", help="validate manifests without invoking Claude")
+    live = sub.add_parser("live-check", help="verify the installed Claude CLI version only")
+    add_common_executable_argument(live)
 
     plan = sub.add_parser("plan", help="start a compatibility-checked plan session")
     add_common_executable_argument(plan)
@@ -157,6 +197,11 @@ def main(argv: list[str] | None = None) -> int:
 
         executable = claude_executable(args.claude)
         validate_declared_compatibility(executable, manifest)
+        if args.action == "live-check":
+            print(
+                f"COMPATIBILITY LIVE PASS: Claude Code {manifest['claude_code']['verified_version']} executable verified; no model task invoked"
+            )
+            return 0
 
         if args.action == "plan":
             return run_passthrough(build_plan_command(manifest, executable), ROOT)
@@ -172,15 +217,17 @@ def main(argv: list[str] | None = None) -> int:
             git(base, "worktree", "add", "-b", args.name, str(target), approved)
             return run_passthrough([executable], target)
 
-        if not args.prompt.is_file() or not args.schema.is_file():
-            raise ValidationError("prompt and schema must be existing files")
-        schema = load_data(args.schema, "json")
+        prompt = require_within_lab(args.prompt, "prompt", file=True)
+        schema_path = require_within_lab(args.schema, "schema", file=True)
+        cwd = require_within_lab(args.cwd, "working directory")
+        schema = load_data(schema_path, "json")
+        validate_schema_dialect(schema)
         if schema.get("type") != "object":
             raise ValidationError("return schema must describe an object")
-        command = build_structured_command(manifest, executable, args.prompt, args.schema)
+        command = build_structured_command(manifest, executable, prompt, schema_path)
         try:
             completed = subprocess.run(
-                command, cwd=args.cwd.resolve(), text=True, capture_output=True, check=False
+                command, cwd=cwd, text=True, capture_output=True, check=False
             )
         except OSError as exc:
             raise ValidationError(f"cannot execute Claude CLI: {exc}") from exc

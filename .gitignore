@@ -1,12 +1,47 @@
+# Python caches, virtual environments, builds, and coverage
 __pycache__/
 *.py[cod]
-.DS_Store
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
 
-# Generated exercise evidence
+# Generated exercise evidence and local logs
 evidence/runs/*.csv
+evidence/runs/*.json
+evidence/runs/*.log
 evidence/claims/characterization.md
+*.log
+*.tmp
+*.bak
+*.db
+*.sqlite
+*.sqlite3
 
-# Local worktrees and editor state
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+.envrc
+credentials.json
+secrets.json
+id_rsa
+id_ed25519
+*.pem
+*.key
+*.p12
+*.pfx
+.claude/settings.local.json
+
+# Local worktrees, editor state, and operating-system metadata
 .worktrees/
 .vscode/
 .idea/
+.DS_Store

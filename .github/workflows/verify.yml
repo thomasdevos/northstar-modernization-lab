@@ -1,4 +1,4 @@
-name: companion-lab
+name: verify starter lab
 
 on:
   push:
@@ -8,43 +8,54 @@ permissions:
   contents: read
 
 jobs:
-  verify-starting-state:
+  starter-state:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.13"]
     steps:
-      - name: Check out repository
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-
-      - name: Record tool versions
+      - name: Check out repository without persisted credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Select supported Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: ""
+      - name: Report tool versions
         run: |
           python3 --version
-          make --version
-          git --version
-
+          make --version | sed -n '1p'
       - name: Run passing gates
         run: |
           make test
           make policy
           make baseline
           make characterize
-
-      - name: Verify the intentional comparator failure
+      - name: Confirm intentional comparator failure
         shell: bash
         run: |
           set +e
-          make compare > compare.log 2>&1
+          make compare >"$RUNNER_TEMP/compare.log" 2>&1
           status=$?
           set -e
-          cat compare.log
+          cat "$RUNNER_TEMP/compare.log"
           test "$status" -ne 0
-          grep -q "STL-1002" compare.log
-
-      - name: Verify the aggregate gate remains intentionally blocked
+          grep -F "STL-1002" "$RUNNER_TEMP/compare.log"
+      - name: Confirm aggregate gate exposes the starter gap
         shell: bash
         run: |
           set +e
-          make verify > verify.log 2>&1
+          make verify >"$RUNNER_TEMP/verify.log" 2>&1
           status=$?
           set -e
-          cat verify.log
+          cat "$RUNNER_TEMP/verify.log"
           test "$status" -ne 0
-          grep -Fq "[0, 0, 1]" verify.log
+          grep -F "[0, 0, 1]" "$RUNNER_TEMP/verify.log"
+      - name: Clean generated evidence and verify tracked state
+        run: |
+          make clean
+          test -z "$(git status --porcelain --untracked-files=no)"

@@ -9,9 +9,11 @@ import unittest
 from unittest.mock import patch
 
 from scripts.claude_compat import (
+    ROOT,
     extract_structured_output,
     load_manifest,
     main,
+    require_within_lab,
     validate_approved_base,
 )
 from scripts.validate_artifacts import ValidationError
@@ -69,7 +71,7 @@ class ClaudeCompatibilityTests(unittest.TestCase):
             self.assertEqual(["--permission-mode", "plan"], calls[1]["argv"])
 
     def test_structured_wrapper_passes_exact_argv_and_extracts_envelope(self):
-        with TemporaryDirectory() as root_name:
+        with TemporaryDirectory(dir=ROOT / "evidence/runs") as root_name:
             root = Path(root_name)
             fake, log = make_fake(root)
             prompt = root / "prompt.txt"
@@ -115,13 +117,7 @@ class ClaudeCompatibilityTests(unittest.TestCase):
         with TemporaryDirectory() as root_name:
             root = Path(root_name)
             repo = root / "repo"
-            repo.mkdir()
-            run("git", "init", "-q", cwd=repo)
-            run("git", "config", "user.email", "lab@example.invalid", cwd=repo)
-            run("git", "config", "user.name", "Lab test", cwd=repo)
-            (repo / "tracked.txt").write_text("approved\n", encoding="utf-8")
-            run("git", "add", "tracked.txt", cwd=repo)
-            run("git", "commit", "-qm", "approved base", cwd=repo)
+            run("git", "clone", "-q", str(ROOT), str(repo), cwd=root)
             revision = run("git", "rev-parse", "HEAD", cwd=repo)
             fake, log = make_fake(root)
             with patch.dict(os.environ, {"FAKE_CLAUDE_LOG": str(log)}, clear=False):
@@ -137,16 +133,14 @@ class ClaudeCompatibilityTests(unittest.TestCase):
 
     def test_dirty_or_wrong_approved_base_fails_before_claude(self):
         with TemporaryDirectory() as root_name:
-            repo = Path(root_name)
-            run("git", "init", "-q", cwd=repo)
+            root = Path(root_name)
+            repo = root / "repo"
+            run("git", "clone", "-q", str(ROOT), str(repo), cwd=root)
             run("git", "config", "user.email", "lab@example.invalid", cwd=repo)
             run("git", "config", "user.name", "Lab test", cwd=repo)
-            (repo / "one").write_text("one", encoding="utf-8")
-            run("git", "add", "one", cwd=repo)
-            run("git", "commit", "-qm", "one", cwd=repo)
             old = run("git", "rev-parse", "HEAD", cwd=repo)
-            (repo / "two").write_text("two", encoding="utf-8")
-            run("git", "add", "two", cwd=repo)
+            (repo / "reader-note.txt").write_text("two", encoding="utf-8")
+            run("git", "add", "reader-note.txt", cwd=repo)
             run("git", "commit", "-qm", "two", cwd=repo)
             with self.assertRaisesRegex(ValidationError, "revision mismatch"):
                 validate_approved_base(repo, old)
@@ -154,6 +148,62 @@ class ClaudeCompatibilityTests(unittest.TestCase):
             (repo / "two").write_text("dirty", encoding="utf-8")
             with self.assertRaisesRegex(ValidationError, "not clean"):
                 validate_approved_base(repo, current)
+
+    def test_structured_output_rejects_non_finite_json(self):
+        with self.assertRaisesRegex(ValidationError, "non-finite"):
+            extract_structured_output(
+                '{"structured_output":{"value":NaN}}',
+                {"type": "object", "properties": {"value": {"type": "number"}}},
+            )
+
+    def test_paths_outside_lab_are_rejected(self):
+        with TemporaryDirectory() as root_name:
+            outside = Path(root_name)
+            with self.assertRaisesRegex(ValidationError, "within the Northstar lab"):
+                require_within_lab(outside, "working directory")
+            run("git", "init", "-q", cwd=outside)
+            run("git", "config", "user.email", "lab@example.invalid", cwd=outside)
+            run("git", "config", "user.name", "Lab test", cwd=outside)
+            (outside / "one").write_text("one", encoding="utf-8")
+            run("git", "add", "one", cwd=outside)
+            run("git", "commit", "-qm", "one", cwd=outside)
+            revision = run("git", "rev-parse", "HEAD", cwd=outside)
+            with self.assertRaisesRegex(ValidationError, "not a Northstar lab"):
+                validate_approved_base(outside, revision)
+
+    def test_unsupported_structured_schema_fails_before_model_task(self):
+        with TemporaryDirectory(dir=ROOT / "evidence/runs") as root_name:
+            root = Path(root_name)
+            fake, log = make_fake(root)
+            prompt = root / "prompt.txt"
+            schema = root / "return.schema.json"
+            prompt.write_text("Bounded task", encoding="utf-8")
+            schema.write_text(
+                '{"type":"object","properties":{"status":{"type":"string","minLength":1}}}',
+                encoding="utf-8",
+            )
+            stderr = io.StringIO()
+            with patch.dict(
+                os.environ, {"FAKE_CLAUDE_LOG": str(log)}, clear=False
+            ), contextlib.redirect_stderr(stderr):
+                self.assertEqual(
+                    1,
+                    main(
+                        [
+                            "structured-task",
+                            "--claude",
+                            str(fake),
+                            "--cwd",
+                            str(root),
+                            "--prompt",
+                            str(prompt),
+                            "--schema",
+                            str(schema),
+                        ]
+                    ),
+                )
+            self.assertIn("unsupported schema keywords", stderr.getvalue())
+            self.assertEqual([["--version"]], [record["argv"] for record in records(log)])
 
     def test_version_mismatch_stops_before_workflow_invocation(self):
         with TemporaryDirectory() as root_name:

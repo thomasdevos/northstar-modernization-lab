@@ -16,9 +16,14 @@ def compare() -> list[str]:
     replacement_output = RUNS / "compare-replacement.csv"
     run_legacy(INPUT, legacy_output)
     run_replacement(INPUT, replacement_output)
-    old = legacy_output.read_text(encoding="utf-8").splitlines(keepends=True)
-    new = replacement_output.read_text(encoding="utf-8").splitlines(keepends=True)
-    return list(difflib.unified_diff(old, new, fromfile="legacy", tofile="replacement"))
+    old_bytes = legacy_output.read_bytes()
+    new_bytes = replacement_output.read_bytes()
+    if old_bytes == new_bytes:
+        return []
+    old = old_bytes.decode("utf-8").splitlines(keepends=True)
+    new = new_bytes.decode("utf-8").splitlines(keepends=True)
+    differences = list(difflib.unified_diff(old, new, fromfile="legacy", tofile="replacement"))
+    return differences or ["Binary or newline-level output difference detected\n"]
 
 
 def main() -> int:

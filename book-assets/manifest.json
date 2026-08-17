@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "description": "Full JSON and YAML listings externalized from numbered practical chapters.",
+  "description": "Full JSON and YAML listings externalized from numbered practical chapters; manuscript provenance paths refer to the separately licensed source revision.",
   "listing_count": 70,
   "status_definitions": {
-    "executable": "Complete listing with no detected omission marker. Validate environment-specific values before use.",
+    "executable": "Textually complete listing with no detected omission marker; not a claim of standalone runnability or production approval. Validate prerequisites and environment-specific values before use.",
     "illustrative": "Inherited example contains an explicit example, placeholder, omission marker, or incomplete JSON."
   },
   "listings": [

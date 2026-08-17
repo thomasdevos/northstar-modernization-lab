@@ -11,7 +11,7 @@
       "required": ["verified_version", "verification_status", "reviewed_on", "documentation"],
       "properties": {
         "verified_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
-        "verification_status": {"enum": ["documentation-reviewed-not-locally-invoked", "locally-verified"]},
+        "verification_status": {"enum": ["documentation-reviewed-not-locally-invoked", "local-version-check-only", "locally-verified"]},
         "reviewed_on": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
         "documentation": {"type": "array", "minItems": 1, "items": {"type": "string"}}
       },
